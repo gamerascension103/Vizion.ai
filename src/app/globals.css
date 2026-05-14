@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ground: theme('colors.ground');
+  --color-surface-1: theme('colors.surface-1');
+  --color-surface-2: theme('colors.surface-2');
+  --color-rule-primary: theme('colors.rule-primary');
+  --color-rule-inner: theme('colors.rule-inner');
+  --color-ink-primary: theme('colors.ink-primary');
+  --color-ink-secondary: theme('colors.ink-secondary');
+  --color-ink-tertiary: theme('colors.ink-tertiary');
+  --color-ink-quaternary: theme('colors.ink-quaternary');
+  --color-signal-agent: theme('colors.signal-agent');
+  --color-signal-leak: theme('colors.signal-leak');
+  --color-signal-leak-border: theme('colors.signal-leak-border');
+}
+
+@layer base {
+  html {
+    background: theme('colors.ground');
+    color: theme('colors.ink-primary');
+    font-family: theme('fontFamily.sans');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: theme('colors.ground');
+    color: theme('colors.ink-primary');
+  }
+
+  /* Tabular numerals everywhere by default for financial UI */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes vh-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+@keyframes vh-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

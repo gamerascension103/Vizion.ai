@@ -1,0 +1,2 @@
+brief_00_project_setup | Scaffolded Next.js + TS + Tailwind, dropped canon docs, configured color/type tokens, installed Inter Tight and JetBrains Mono.
+brief_01_hero_section | Shipped hero: nav, veteran stamp, eyebrow, fragment-and-pivot hook, sub, risk banner with animated counter, Phase 3 dashboard with leaks + month sidebar + agent strip, primary and secondary CTAs. Responsive at 720px and 380px breakpoints. Judgment call: CTAs use 'use client' for 0.5px-bordered hover effects rather than CSS-only approach; avoids inline-style/Tailwind override complexity.

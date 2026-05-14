@@ -1,0 +1,196 @@
+# Cascade rules — Vizion Corp AI
+
+These rules govern how Cascade operates in this codebase. Read on every session start. Apply mechanically. Do not bypass to ship faster — if a brief seems to require bypassing, the brief is wrong, not the rules.
+
+Companion files Cascade reads on every session start:
+- `how_we_work.md` — operator preferences, three-role workflow, communication style
+- `decisions_log.md` — locked decisions for this project
+- `design_canon.md` — visual + typographic system
+- `positioning.md` — what Vizion sells, brand language, forbidden vocabulary
+- `BUILD_LOG.md` — what's been shipped
+
+---
+
+## What this project is
+
+The public-facing marketing site for **Vizion Corp AI**, a consultancy that integrates AI into how small and mid-market businesses run their operations. The flagship offering is **Captain's Method**, a four-phase engagement. The site sells the engagement; it is not a SaaS product, not a logged-in surface, not a tool the buyer operates.
+
+Unlike Mr. Clean (Vizion's internal QB cleanup tool), this project lives or dies on perception. A site that functions correctly but feels generic has failed.
+
+**Stack (locked):**
+- Next.js 14+ (App Router), TypeScript, Tailwind
+- Vercel hosting
+- Resend for transactional email
+- Plausible for analytics
+- Code-defined content (no CMS in v1)
+- No auth surface in v1
+
+If a brief proposes a different stack choice, stop and flag — the brief is wrong, not the stack.
+
+---
+
+## Workflow
+
+- One brief at a time. The chat writes briefs. Jake pastes them. Cascade implements them as written.
+- If a brief is ambiguous, stop and ask. Cascade is reliable on specifics, unreliable on judgment calls.
+- Cascade does not write briefs to itself. Cascade does not start work without a brief.
+- Append one line to `BUILD_LOG.md` (repo root) for every brief shipped: `brief_name | one-sentence summary`. Append only — never edit historic entries.
+- **Verify working directory before starting any brief.** Run `pwd` (or equivalent) and confirm it matches the expected Vizion Corp repo path. If the path looks wrong (e.g. you find yourself in a different project's folder), stop and flag — do not write any files until the operator confirms.
+- **Re-read `decisions_log.md` and `design_canon.md` at the start of every session.** They are the source of truth for what's locked. If a brief contradicts them, the brief is wrong.
+
+---
+
+## Verification
+
+Different surfaces verify differently. Cascade reports verification results in the build log entry for the brief.
+
+### Mechanical verification (Cascade self-reports pass/fail)
+
+| Surface | What "verified" means |
+|---|---|
+| TypeScript | `tsc --noEmit` passes. No `any` types unless inline-justified with `// reason: ...` |
+| Build | `next build` completes without warnings or errors |
+| Linting | ESLint and Prettier pass on changed files |
+| Accessibility | All interactive elements keyboard-focusable; visible focus indicators present; color contrast ≥ 4.5:1 for body text and ≥ 3:1 for large text per WCAG 2.1 AA |
+| Responsive | Layout renders without overflow at 380px, 720px, 1024px, 1440px widths (Cascade checks via dev tools / playwright; Jake confirms in real Chrome) |
+| Color tokens | No raw hex values in component code — only Tailwind tokens or CSS variables sourced from canon |
+| Forbidden vocabulary | Grep for the forbidden words from `decisions_log.md` in any shipped copy. Zero matches required. |
+| Tabular numerals | Any financial number uses `font-variant-numeric: tabular-nums` (or Tailwind `tabular-nums`) |
+
+### Perceptual verification (Operator owns; Cascade does not self-grade)
+
+- Whether the hook lands
+- Whether type rhythm feels right
+- Whether motion timing reads as ceremonial vs. busy
+- Whether a section feels signature vs. generic
+- Whether copy voice matches `positioning.md`
+
+For these, Cascade implements the brief exactly, runs mechanical verification, and reports completion. Cascade does NOT assert "this looks great" or "this feels right." Those are Jake's calls in real Chrome. If Cascade has uncertainty about a perceptual decision, surface the uncertainty in the build log entry — don't paper over it.
+
+---
+
+## Code quality bar
+
+Vizion's site is public-facing and sells the brand's competence. The quality bar is steady throughout — no prototype-vs-production split.
+
+- **No `any` types** unless inline-justified with `// reason: ...`
+- **No unhandled promise rejections.** Every async path has error handling.
+- **No `console.log` in committed code** unless deliberately a logging line. Use a real logger or remove. Debug logs added during diagnosis must be removed before merge.
+- **No premature optimization.** Don't add caching layers, edge workers, or "for scale" patterns unless a brief explicitly requires them.
+- **No dead code.** If a brief removes a section, remove the code — don't comment it out.
+- **No TODO comments without a tracking entry.** If something's deferred, it goes in `decisions_log.md` or as an open question in `design_canon.md`, not a `// TODO` orphan.
+- **One component, one purpose.** No V2 versions of components alongside V1. If a brief refactors, the old version is removed.
+
+---
+
+## Anti-drift
+
+These are the categories where Cascade has high risk of drifting away from canon. Apply mechanically.
+
+- **Design canon is canon.** If a brief says "use a different color" or "swap the font," stop and flag. Canon changes happen in the chat, get logged in `decisions_log.md`, and update `design_canon.md`. They don't happen inside a build brief.
+- **Color tokens, not raw hex.** Always reference tokens (`signal-agent`, `ink-primary`, etc.) defined per canon. Raw hex values in component code is a violation.
+- **One primary CTA per section.** Adding "extra" CTAs is drift. If a brief seems to want more, the brief is wrong.
+- **No new fonts.** Inter Tight + JetBrains Mono is the locked type stack. Don't substitute or supplement.
+- **No stock imagery, no AI-generated decorative imagery.** Ever. If a brief includes a placeholder image with `<img src="/stock/..." />` or similar, stop and flag — the section isn't ready.
+- **No lorem ipsum in committed code.** If copy isn't final, the section isn't ready to brief. The brief should contain final copy verbatim.
+- **No "5-step methodology" graphics.** Process diagrams ship only when they convey information text can't.
+- **Forbidden vocabulary check on every copy change.** Cascade greps for words listed in `decisions_log.md` (transform, unlock, scale, operationalize, harness, leverage, journey, empower, AI-powered, intelligent, hybrid intelligence, responsible AI, beyond pilots, at scale, seamless, robust, cutting-edge, next-generation, revolutionize, democratize). Zero matches required.
+- **Captain's Method is the named service; Mr. Clean stays back-of-house.** Mr. Clean may appear in the Engagement section (Section 4) only. If a brief introduces Mr. Clean elsewhere, stop and flag.
+- **Brand language is in-house.** Use `money leaks`, `the bleed`, `visibility`, `the dashboard`, `decision latency`, `debrief`, `operator approves`, `industry-specific`, `risk evaluation`. Don't substitute weaker generic terms.
+
+---
+
+## Security baseline
+
+This site has minimal attack surface — no auth, no logged-in users, no client data on the site itself. The security work is mostly about not leaking the few credentials we do have.
+
+**Defaults baked in — no permission asked, no brief-by-brief reasoning:**
+
+- First commit includes `.gitignore` with: `.env*`, `*.pem`, `*.key`, `secrets/`, `credentials/`, `node_modules/`, `.next/`
+- Secrets live in environment variables locally, in Vercel platform secrets in production. Never in code, never in commits, never in test fixtures.
+- Resend API key (`RESEND_API_KEY`) and Plausible domain configuration live in env vars only.
+- New dependency added → lockfile updated and committed in same commit. No exceptions.
+- HTTPS enforced (Vercel handles this; don't break it). HSTS header set.
+- Form submissions: validate on the server. Rate-limit at the route level. Don't trust client-side validation alone.
+- No third-party scripts loaded without explicit operator approval. Plausible is approved; anything else requires a decision logged in `decisions_log.md`.
+
+**Pre-flight checks for any brief that touches infrastructure (deploy config, form submissions, email integration, environment configuration):**
+
+Cascade runs these checks and reports pass/fail in the build log:
+
+1. Working directory matches expected Vizion Corp repo path — pass/fail
+2. `.gitignore` includes `.env*` patterns — pass/fail
+3. No secrets in committed files (grep for `api_key`, `secret`, `password`, `token`, `BEGIN PRIVATE KEY`, `sk_`, `re_`) — pass/fail
+4. Lockfile present and committed (`package-lock.json` or `pnpm-lock.yaml`) — pass/fail
+5. HTTPS enforced — pass/fail
+6. For form briefs: server-side validation present, rate-limiting in place, no PII in logs — pass/fail
+7. For email briefs: Resend API key referenced via `process.env.RESEND_API_KEY`, never inline — pass/fail
+8. For analytics briefs: Plausible script loaded with correct domain config, no other tracking introduced — pass/fail
+
+Any failure blocks merge. Failures are reported with specifics; operator decides remediation.
+
+---
+
+## Brief preamble pattern
+
+Briefs that touch the design canon, copy voice, or any locked decision include a one-line reference at the top:
+
+> *"Apply design canon: §[section]. Apply positioning: §[section]. Apply decisions log: [date entry]."*
+
+Cascade reads the referenced canon material before implementing. If a brief references a section but Cascade can't find it, ask the operator before proceeding.
+
+---
+
+## Session start
+
+1. Verify working directory matches the Vizion Corp repo. If not, stop and flag.
+2. Read `BUILD_LOG.md` — what's been shipped.
+3. Read `decisions_log.md` — what's locked.
+4. Read `design_canon.md` — the visual system in force.
+5. Read this file (`.windsurfrules`) — apply the rules.
+6. Read the latest brief from the operator.
+7. Confirm understanding of the brief in one sentence before implementing. If unclear, ask.
+
+---
+
+## What Cascade is reliable for
+
+- Next.js route handlers, server actions, and page components from explicit specs
+- TypeScript types from explicit data shapes
+- Tailwind class application against a clear design spec
+- Component implementations with explicit prop types
+- Mechanical refactors with specific scope
+- Resend integration for transactional email from a clear spec
+- Form server actions with explicit validation rules
+- Accessibility patterns (focus management, semantic HTML, ARIA) from a clear spec
+- Responsive breakpoint implementation from canon-specified breakpoints
+- Mechanical security defaults per the baseline above
+- Copy insertion when the copy is final and verbatim in the brief
+
+## What Cascade is unreliable for
+
+- Open-ended design decisions
+- Copywriting from scratch
+- Brand voice calls (the positioning doc and design canon are the only sources of truth)
+- Layout choices that require taste
+- Anything where intent has to be interpreted
+- Deciding whether motion timing "feels right" — implement the spec, let Jake verify
+- Deciding whether a section is "done" perceptually — that's Jake's call
+- Inventing copy for a section the brief left blank
+- Interpreting whether a forbidden word's synonym is acceptable — if uncertain, ask
+
+If a decision needs to be made — visual, copy, or architectural — the chat makes it before writing the brief. Don't ask Cascade to interpret.
+
+---
+
+## What Cascade does NOT do
+
+- Does not bypass canon to ship faster
+- Does not store production credentials in development environments
+- Does not introduce new dependencies, fonts, colors, or design patterns without explicit operator approval logged in `decisions_log.md`
+- Does not write copy without an explicit brief
+- Does not "improve" copy that's been provided in a brief
+- Does not introduce parallel V2 versions of components when one caller exists
+- Does not ship lorem ipsum, placeholder text, or stock photography
+- Does not load third-party scripts beyond what's in `decisions_log.md`
+- Does not draft client-facing communications of any kind
