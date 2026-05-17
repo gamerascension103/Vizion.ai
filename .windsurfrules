@@ -13,7 +13,7 @@ Companion files Cascade reads on every session start:
 
 ## What this project is
 
-The public-facing marketing site for **Vizion Corp AI**, a consultancy that integrates AI into how small and mid-market businesses run their operations. The flagship offering is **Captain's Method**, a four-phase engagement. The site sells the engagement; it is not a SaaS product, not a logged-in surface, not a tool the buyer operates.
+The public-facing marketing site for **Vizion Corp AI**, a consultancy that helps owner-operators of $5-50M businesses on QuickBooks Desktop or Enterprise find and stop money leaks. Three customer-facing products: **The X-Ray** (diagnostic), **The Command Deck** (dashboard), **Watchdog** (AI agent). The site sells the engagement; it is not a SaaS product, not a logged-in surface, not a tool the buyer operates.
 
 Unlike Mr. Clean (Vizion's internal QB cleanup tool), this project lives or dies on perception. A site that functions correctly but feels generic has failed.
 
@@ -94,9 +94,11 @@ These are the categories where Cascade has high risk of drifting away from canon
 - **No stock imagery, no AI-generated decorative imagery.** Ever. If a brief includes a placeholder image with `<img src="/stock/..." />` or similar, stop and flag — the section isn't ready.
 - **No lorem ipsum in committed code.** If copy isn't final, the section isn't ready to brief. The brief should contain final copy verbatim.
 - **No "5-step methodology" graphics.** Process diagrams ship only when they convey information text can't.
-- **Forbidden vocabulary check on every copy change.** Cascade greps for words listed in `decisions_log.md` (transform, unlock, scale, operationalize, harness, leverage, journey, empower, AI-powered, intelligent, hybrid intelligence, responsible AI, beyond pilots, at scale, seamless, robust, cutting-edge, next-generation, revolutionize, democratize). Zero matches required.
-- **Captain's Method is the named service; Mr. Clean stays back-of-house.** Mr. Clean may appear in the Engagement section (Section 4) only. If a brief introduces Mr. Clean elsewhere, stop and flag.
-- **Brand language is in-house.** Use `money leaks`, `the bleed`, `visibility`, `the dashboard`, `decision latency`, `debrief`, `operator approves`, `industry-specific`, `risk evaluation`. Don't substitute weaker generic terms.
+- **Forbidden vocabulary check on every copy change.** Cascade greps for these words and reports zero matches: `transform`, `unlock`, `scale`, `operationalize`, `harness`, `leverage`, `journey`, `empower`, `AI-powered`, `intelligent`, `hybrid intelligence`, `responsible AI`, `beyond pilots`, `at scale`, `seamless`, `robust`, `cutting-edge`, `next-generation`, `revolutionize`, `democratize`. Plus voice-rule additions: `actually`, `honestly`, `truly`, `genuinely`, `studies show` (without naming a study), `most companies` (without specifying), `the honest version is`, `the crucial point is`, `here's the important thing`, `I'm here to help`. Plus `real` used as emphasis (not contrastive). Zero matches required across all of these.
+- **Customer-facing product names are locked.** Use `The X-Ray` (always capitalized with "The"), `The Command Deck`, `Watchdog` (singular) or `Watchdogs` (plural), and `PCORD` for the methodology. Never substitute generics like "the dashboard" or "the AI agent" when the product is being named.
+- **Retired language must not appear in customer-facing copy or UI.** This includes: `Captain's Method`, `Four-Phase Engagement`, `ops-risk-dashboard.v3`, generic `AI agent`, and `Operator` (in the trust model context — use `Handler`). Grep for these on every brief touching copy. Zero matches required.
+- **The trust model says "Handler approves every action."** Not "Operator approves." `Handler` is the locked term for the human in the chair who approves Watchdog actions.
+- **Brand language is in-house.** Use `money leaks`, `the bleed`, `visibility`, `built from the ground up`, `decision latency`, `debrief`, `handler approves`, `industry-specific`, `The X-Ray Guarantee`. Don't substitute weaker generic terms.
 
 ---
 

@@ -150,11 +150,159 @@ Reason: single-CTA pages convert at 13.5% vs. 10.5% for multi-CTA (research, `la
 
 Reason: section 2 is where the writing voice gets established. If voice lands wrong on section 2, batching sections 3–7 would waste briefs. Get voice locked, then accelerate.
 
----
+## 2026-05-14 — Package manager
 
-## 2026-05-13 — Nav anchors deferred
+- **npm**, not pnpm. pnpm wasn't installed on the build machine during Brief 00.
+- Functionally identical for this project's needs. No migration planned.
+- If pnpm becomes available later, npm remains the locked tool unless explicitly updated.
 
-Nav links in the hero (Captain's Method, How It Works, Engagement) are rendered as static text in v1 (Brief 01). Smooth-scroll anchor wiring deferred until Sections 4 (Engagement) and beyond are built. No code TODOs.
+## 2026-05-14 — Nav anchors deferred
+
+Nav links in the hero (Captain's Method, How It Works, Engagement) are rendered as static text in v1 (Brief 01). Smooth-scroll anchor wiring is deferred until Sections 4 (Engagement) and beyond are built. No code TODOs — tracked here.
+
+## 2026-05-14 — Insignia (locked)
+
+Vizion's brand mark is a polished amber shield insignia in the modernized officer-pin tradition. The mark exists in two canonical forms: **pin standalone** and **full lockup** (pin + wordmark + descriptor).
+
+**Pin composition (eight assembled components):**
+1. Outer shield rim — polished amber, beveled stroke (`#FFD879` → `#F2B33D` → `#6B4F18`)
+2. Perimeter band with chronograph tick marks at top
+3. Inner panel — recessed inset where the V mounts, with side-rib gradations
+4. The V — raised relief, full vertical gradient, the focal mass
+5. Secondary chevron — single stripe below the V, same amber metal as the V
+6. Two steel fasteners at upper corners of the outer shield
+7. Three steel cardinal markers — top center, left, right (no bottom — would crowd the chevron)
+8. Hairline drop shadow at the base (the only "render" concession outside the mark itself)
+
+**Multi-metal color logic — exclusive to the insignia:**
+- *Brass amber* — rim, perimeter band, inner panel borders, V, chevron, divider lines
+- *Cool steel* (`#5E6168` / `#22272F` family) — fasteners, cardinal markers (the "hardware" metal)
+- *Deep recess* (`#1A0F03` / `#3D2E10`) — shadow zones, recessed channels
+- *Warm bone* (`#EDE6D5`) — reserved for the wordmark below the pin, not used within the pin itself
+
+**Full lockup composition (top to bottom):**
+1. The pin
+2. 20px vertical gap
+3. **VIZION CORP** — Inter Tight, weight 600, 32px, letter-spacing 0.34em, color ink-primary (`#EDE6D5`), padding-left 0.34em (compensates for the trailing letter-spacing visual drift). Two-space gap between "VIZION" and "CORP" (`&nbsp;&nbsp;` in HTML).
+4. 10px vertical gap
+5. **Money leaks, made visible** — JetBrains Mono, 9px, weight 500, letter-spacing 0.24em, color signal-agent (`#F2B33D`), sentence case (uppercase rendering is acceptable for stylistic use but lowercase reads more issued).
+
+## 2026-05-14 — Insignia canon exception (locked)
+
+The insignia is the **only** element on the site permitted to use dimensional rendering. Specifically:
+- Multi-stop gradients on metal surfaces
+- Layered highlight + shadow paths to imply depth
+- Drop shadow at the pin's base (hairline ellipse)
+- Recessed dark zones implying machined channels
+
+This exception applies **only** to the insignia mark itself in both the standalone and lockup forms. It does NOT apply to:
+- Dashboard surfaces (stay flat)
+- Type treatments (stay flat — color tokens only)
+- Section backgrounds (stay flat)
+- Buttons, banners, panels, agent strips, leak rows, anything else (all stay flat)
+
+Reason: real brand marks function as objects within an otherwise flat system. The mark is the only three-dimensional thing on the site; everything else is the information layer. This is hierarchy, not inconsistency. Full reasoning in `design_canon.md` (Insignia section).
+
+## 2026-05-14 — Brand descriptor (locked)
+
+The descriptor line under the wordmark is **"Money leaks, made visible"** — verbatim, sentence case, with the comma.
+
+Used:
+- Under the wordmark in the full lockup
+- As a standalone tagline where short brand statements are needed (meta tags, social previews, founder email signatures, business cards)
+- May appear on the site outside the lockup if used at the same JetBrains Mono / 0.24em / signal-agent treatment
+
+Not used:
+- As a hero headline (the hero hook is "Find what your business is leaking. Then stop it.")
+- As body copy
+- Paraphrased ("making money leaks visible," "we find the money leaks," etc. — always the canonical phrasing)
+
+## 2026-05-14 — Insignia usage map
+
+| Context | What appears | Size |
+|---|---|---|
+| Nav (top-left of every page) | Pin alone, no wordmark | 32–40px height |
+| Hero region — brand presence | Full lockup OR pin alone with wordmark text adjacent | Pin at 280px height |
+| Founders section | Full lockup OR pin alone | Pin at 200–240px height |
+| Footer brand moment | Pin alone OR full lockup at small scale | Pin at 80–120px height |
+| Favicon / browser tab | Pin alone, simplified | 32px, 16px |
+| Social preview images | Full lockup | Composition fills the OG image |
+| Email signatures, business cards | Full lockup | Print-scale |
+
+**Standalone pin** is the default for small contexts and chrome. **Full lockup** is for ceremonial placement (hero, founders, footer). Mixing within a single viewport is generally wrong — use one form per region.
+
+## 2026-05-16 — Product naming migration (locked, supersedes prior naming)
+
+Following the customer-facing handoff from the parallel Vizion marketing chat (Welcome Packet, Pricing Sheet, Readahead, Methodology Brief PDFs are now the source of truth for customer-facing language), the following names are locked:
+
+**Locked customer-facing product names:**
+- **The X-Ray** — the diagnostic. A dollar-quantified report that finds where the business is leaking money. Always capitalized with "The." Never "an X-Ray" or "the x-ray."
+- **The Command Deck** — the dashboard product. Built from the ground up for each client's business. "Built from the ground up" is locked language.
+- **Watchdog** — the AI agent product. Each Watchdog has a "handler" at the client business who approves every action. Singular when one; plural ("Watchdogs") when multiple.
+- **PCORD** — the customer-facing methodology framework. People cost and risk · Cash flow visibility · Operational leakage · Revenue-side leakage · Decision latency. Five buckets that organize what The X-Ray finds.
+
+**Retired language (no longer customer-facing):**
+- ~~Captain's Method~~ — retired customer-facing. Internal-only name for the methodology. Does not appear on the website, social, or any external materials.
+- ~~Four-Phase Engagement~~ — does not exist customer-facing. No four-phase framework appears in locked customer materials. Remove entirely from copy and UI labels.
+- ~~AI agent on watch~~ — generic. Replace with "Watchdog on watch" or rebuild the sentence.
+- ~~ops-risk-dashboard.v3~~ — placeholder label in the dashboard mockup. Replace with "Command Deck — [Client]" or canonical product naming.
+
+Reason: Captain's Method served as positioning language during the design phase but the customer-facing materials moved to a product-led architecture (three named products + one methodology acronym) rather than an engagement-led architecture (one named service with phases). Product-led is better for buyer trust because each product stands on its own; the buyer doesn't have to commit to a four-phase journey to understand the value.
+
+This migration is non-optional. Every appearance of retired language on the website, in code, in copy, or in briefs is wrong and must be replaced.
+
+## 2026-05-16 — Brand subtag (locked, supersedes Air Force stamp)
+
+The locked brand subtag is **"VETERAN-OWNED · PRACTICAL · PLAIN-SPOKEN"**.
+
+This replaces the prior stamp "VETERAN OWNED — AIR FORCE." Reason: Air Force is Kyle's individual service history, not a brand-level credential. The brand subtag describes the partnership and posture, not either cofounder individually. Air Force specificity belongs in Kyle's bio on a future About/Founders page, not in the brand-level veteran stamp.
+
+Typography stays the same as the prior stamp: JetBrains Mono, 9px, letter-spacing 0.22em, ink-quaternary color, flanked by horizontal rule lines.
+
+## 2026-05-16 — Hero eyebrow (locked)
+
+The hero eyebrow is now `THE X-RAY · THE COMMAND DECK · WATCHDOG`.
+
+This replaces the prior eyebrow `CAPTAIN'S METHOD · FOUR-PHASE ENGAGEMENT`. Reason: names the three customer-facing products in the order the buyer encounters them (diagnostic → dashboard → agent). Sets up the hero copy below as a product tour rather than a methodology pitch.
+
+Typography stays the same as the prior eyebrow: JetBrains Mono, 10px, weight 500, letter-spacing 0.24em, signal-agent color, uppercase.
+
+## 2026-05-16 — Hero sub copy (locked)
+
+The hero sub copy is now:
+
+> The X-Ray finds the leaks. The Command Deck visualizes them. Watchdog watches them. Handler approves every action.
+
+This replaces the prior sub copy. Reason: names the three products in the same order as the eyebrow, attributes one verb to each, and surfaces the trust model ("Handler approves every action") in the canonical PCORD-architecture language ("Handler" rather than the generic "Operator"). Concise, scannable, reads as a four-beat product description.
+
+Typography stays the same as the prior sub: Inter Tight, 15px, weight 400, line-height 1.55, ink-secondary color, max-width 600px.
+
+## 2026-05-16 — X-Ray Guarantee (locked, new content)
+
+The X-Ray Guarantee is load-bearing trust content that must appear on every page where the primary CTA lives. Canonical phrasing:
+
+> If The X-Ray doesn't surface money leaks worth significantly more than what you've paid us for it, we'll walk you through why and refund the difference.
+
+Treatment: small bordered callout, positioned between the dashboard preview and the primary CTA. Visual register: similar to the risk banner but quieter — no animated number, no signal-leak red. Uses ink-primary for the guarantee text, signal-agent amber for the label "THE X-RAY GUARANTEE" or similar small uppercase eyebrow above the body text. Full spec in `design_canon.md` (X-Ray Guarantee component pattern, to be added).
+
+Reason: this is a real customer-facing commitment locked in the Welcome Packet. It's a risk-reversal move that lets the primary CTA do its job — the buyer commits to a conversation knowing the engagement carries a real guarantee. Without it visible, the CTA is asking for trust the page hasn't earned yet.
+
+## 2026-05-16 — CTAs (locked, simplified)
+
+**Single primary CTA per hero. Secondary CTA dropped.**
+
+- Primary CTA copy: `START A CONVERSATION` (replaces `REQUEST BRIEFING`)
+- No secondary CTA in the hero
+
+Reason: Welcome Packet voice ("the rest is a conversation") is the canonical close-state for Vizion's trust frame. "Request Briefing" was operator-grade but reads slightly procedural for the new positioning. "Start a conversation" is softer without being weak. The X-Ray Guarantee above the CTA does the trust work that the secondary CTA was awkwardly attempting.
+
+Single-CTA pages convert at 13.5% vs. 10.5% for multi-CTA (research, `landing_page_research.md`). Dropping the secondary aligns with both the data and the new voice register.
+
+## 2026-05-16 — Dashboard mockup label (locked)
+
+The dashboard mockup label in the hero changes from `ops-risk-dashboard.v3` to `Command Deck — Acme Distribution` (or whatever sample client name is in use). The "PHASE 3 DELIVERABLE" tag also changes to `THE COMMAND DECK · SAMPLE` since "Phase 3" no longer exists in customer-facing language.
+
+The dashboard's internal content (the five ranked leaks, the monthly + annual columns, the Revenue MTD / Pace / Cash sidebar, the agent activity strip) is unchanged except for one swap: the agent strip's "Agent watching · 11 leaks" becomes "Watchdog watching · 11 leaks."
 
 ---
 

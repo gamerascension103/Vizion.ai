@@ -12,10 +12,10 @@ export function AgentStrip() {
         }}
       />
       <p className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase">
-        <span className="text-signal-agent">Agent watching · 5 leaks</span>
+        <span className="text-signal-agent">Watchdog watching · 11 leaks</span>
         <span className="text-ink-quaternary">
           {' '}
-          &nbsp;·&nbsp; Last sweep 4 min ago · No operator actions pending
+          &nbsp;·&nbsp; Drafted 14 collection reminders + 1 pricing memo. Awaiting handler approval.
         </span>
       </p>
     </div>

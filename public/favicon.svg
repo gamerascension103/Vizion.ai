@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 370" width="32" height="32">
+  <defs>
+    <linearGradient id="fav-rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD879" />
+      <stop offset="45%" stop-color="#F2B33D" />
+      <stop offset="100%" stop-color="#6B4F18" />
+    </linearGradient>
+    <linearGradient id="fav-v-face" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFD879" />
+      <stop offset="50%" stop-color="#F2B33D" />
+      <stop offset="100%" stop-color="#A87726" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer shield rim -->
+  <path
+    d="M 50 50 L 230 50 L 230 175 Q 230 270 140 315 Q 50 270 50 175 Z"
+    fill="none"
+    stroke="url(#fav-rim)"
+    stroke-width="5"
+    stroke-linejoin="miter"
+  />
+
+  <!-- Inner panel border -->
+  <path
+    d="M 84 90 L 196 90 L 196 170 Q 196 245 140 275 Q 84 245 84 170 Z"
+    fill="none"
+    stroke="#F2B33D"
+    stroke-width="1.8"
+    stroke-linejoin="miter"
+  />
+
+  <!-- The V - shadow -->
+  <path
+    d="M 105 113 L 122 113 L 140 175 L 158 113 L 175 113 L 140 215 Z"
+    fill="#3D2E10"
+    opacity="0.85"
+    transform="translate(2,3)"
+  />
+  <!-- The V - face -->
+  <path
+    d="M 105 111 L 122 111 L 140 173 L 158 111 L 175 111 L 140 213 Z"
+    fill="url(#fav-v-face)"
+    stroke="#6B4F18"
+    stroke-width="0.7"
+    stroke-linejoin="miter"
+  />
+  <!-- The V - left highlight -->
+  <path
+    d="M 105 111 L 122 111 L 140 173 L 137 177 L 118 113 Z"
+    fill="#FFD879"
+    opacity="0.6"
+  />
+  <!-- The V - right shadow -->
+  <path
+    d="M 175 111 L 158 111 L 140 173 L 143 177 L 172 113 Z"
+    fill="#8A6B25"
+    opacity="0.55"
+  />
+  <!-- The V - crossbar -->
+  <path d="M 105 111 L 175 111" stroke="#FFD879" stroke-width="1" opacity="0.7" />
+
+  <!-- Secondary chevron -->
+  <path
+    d="M 126 230 L 140 242 L 154 230 L 150 230 L 140 239 L 130 230 Z"
+    fill="#F2B33D"
+    stroke="#6B4F18"
+    stroke-width="0.5"
+    stroke-linejoin="miter"
+  />
+  <path
+    d="M 126 230 L 140 242 L 143 240 L 130 230 Z"
+    fill="#FFD879"
+    opacity="0.55"
+  />
+
+  <!-- Divider -->
+  <line x1="80" y1="256" x2="200" y2="256" stroke="#F2B33D" stroke-width="0.7" />
+  <circle cx="140" cy="257" r="1.2" fill="#F2B33D" />
+
+  <!-- Drop shadow at base -->
+  <ellipse cx="140" cy="332" rx="92" ry="4.5" fill="#1A0F03" opacity="0.5" />
+  <ellipse cx="140" cy="332" rx="58" ry="2" fill="#000" opacity="0.4" />
+</svg>

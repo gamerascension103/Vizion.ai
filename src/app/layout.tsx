@@ -19,6 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Vizion Corp AI",
   description: "Captain's Method — Four-phase engagement",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

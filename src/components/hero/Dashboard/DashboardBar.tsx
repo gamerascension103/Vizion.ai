@@ -29,10 +29,10 @@ export function DashboardBar() {
     >
       <div className="flex items-center gap-3">
         <span className="font-mono text-[9px] font-medium tracking-[0.16em] uppercase text-signal-agent border border-signal-agent px-[6px] py-[2px] rounded-[2px]">
-          Phase 3
+          THE COMMAND DECK · SAMPLE
         </span>
-        <span className="font-mono text-[10px] font-medium tracking-[0.14em] uppercase text-ink-tertiary">
-          ops-risk-dashboard.v3
+        <span className="font-mono text-[10px] font-medium tracking-[0.14em] text-ink-tertiary">
+          Command Deck — Acme Distribution
         </span>
       </div>
 
