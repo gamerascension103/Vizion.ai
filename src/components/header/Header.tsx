@@ -29,7 +29,7 @@ export function Header({ variant }: HeaderProps) {
     return (
       <header className="bg-ground">
         {/* Desktop: centered ceremonial block — hidden below 720px */}
-        <div className="max-[720px]:hidden mx-auto max-w-[1200px] px-12 pt-12 pb-5 flex flex-col items-center">
+        <div data-testid="header-desktop-block" className="max-[720px]:hidden mx-auto max-w-[1200px] px-12 pt-12 pb-5 flex flex-col items-center">
           <Insignia size={72} variant="simplified" />
           <div style={{ height: 20 }} />
           <span className="font-sans font-semibold text-[32px] tracking-[0.34em] pl-[0.34em] text-ink-primary">
@@ -59,7 +59,7 @@ export function Header({ variant }: HeaderProps) {
         </div>
 
         {/* Mobile: compressed bar — hidden above 720px */}
-        <div className="hidden max-[720px]:flex items-center justify-between px-5 py-4">
+        <div data-testid="header-mobile-bar" className="hidden max-[720px]:flex items-center justify-between px-5 py-4">
           <div className="flex items-center gap-3">
             <Insignia size={28} variant="simplified" />
             <span className="font-sans font-semibold text-[14px] tracking-[0.22em] pl-[0.22em] text-ink-primary">

@@ -40,3 +40,6 @@ next-env.d.ts
 # secrets
 secrets/
 credentials/
+
+.vercel
+.env*.local

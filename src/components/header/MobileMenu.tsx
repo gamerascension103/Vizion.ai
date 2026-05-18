@@ -46,7 +46,6 @@ export function MobileMenu() {
 
           <nav
             className="flex-1 flex flex-col items-center justify-center gap-8"
-            onClick={(e) => e.stopPropagation()}
           >
             {navLinks.map((link) => (
               <Link
@@ -62,7 +61,6 @@ export function MobileMenu() {
 
           <div
             className="pb-12 flex justify-center"
-            onClick={(e) => e.stopPropagation()}
           >
             <Link
               href="/start"
