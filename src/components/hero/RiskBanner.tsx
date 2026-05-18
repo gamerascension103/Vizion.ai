@@ -31,7 +31,7 @@ function AnimatedRiskNumber({ delay = 1400 }: { delay?: number }) {
 export function RiskBanner() {
   return (
     <div
-      className="mt-8 flex flex-wrap items-center justify-between gap-y-4 gap-x-6 rounded-[3px] px-[26px] py-[22px]"
+      className="flex flex-wrap items-center justify-between gap-y-4 gap-x-6 rounded-[3px] px-[26px] py-[22px]"
       style={{
         background: 'linear-gradient(to right, rgba(227,104,66,0.06), rgba(227,104,66,0.02))',
         border: '0.5px solid var(--color-signal-leak-border)',

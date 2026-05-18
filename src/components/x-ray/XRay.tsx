@@ -57,7 +57,7 @@ export function XRay() {
         {/* Closing prose */}
         <div style={{ maxWidth: '640px' }}>
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
-            The X-Ray takes about three weeks. At the end of it, you have a written report with our findings, our confidence levels, the dollar math behind each one, and our recommended order of operations.
+            We evaluate your business. We assess your risks. You get a written report with our findings, our confidence levels, the dollar math behind each one, and our recommended order of operations.
           </p>
           <p className="text-base max-[720px]:text-[15px]" style={{ ...paragraphStyle, marginBottom: 0 }}>
             <span style={{ color: 'var(--color-ink-secondary-bright)' }}>Then we talk.</span>{' '}About what to fix first, and how.
@@ -66,6 +66,27 @@ export function XRay() {
 
         {/* X-Ray Guarantee — mt-6 on the component provides the 24px top spacing */}
         <XRayGuarantee />
+
+        <p
+          className="text-[11px] max-[720px]:text-[10px]"
+          style={{
+            fontFamily: 'var(--font-jetbrains-mono)',
+            letterSpacing: '0.18em',
+            color: 'var(--color-ink-tertiary)',
+            textTransform: 'uppercase',
+            fontWeight: 500,
+            lineHeight: 1.5,
+            textAlign: 'center',
+            marginTop: '40px',
+            marginBottom: 0,
+            maxWidth: '640px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          Once you&rsquo;ve seen the report, you&rsquo;ll know what to fix and in what order.<br />
+          The Command Deck makes those numbers live.
+        </p>
       </div>
     </section>
   )

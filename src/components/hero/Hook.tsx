@@ -8,7 +8,7 @@ const FRAGMENT_DELAYS = ['0.1s', '0.3s', '0.5s']
 
 export function Hook() {
   return (
-    <div className="mt-7">
+    <div>
       <div className="flex flex-col gap-[6px]">
         {FRAGMENTS.map((text, i) => (
           <p

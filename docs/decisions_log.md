@@ -431,3 +431,57 @@ First used in Brief 05 (The X-Ray section). Real findings (from completed engage
 Mandatory `## Canon updates` section in every brief. Pre-completion canon scan rule. Canon writes are mechanical, not interpretive. Session-close brief format. Full rules in `.windsurfrules` under "Canon update discipline" section, added Brief 4.6.
 
 Reason: canon drift between chat and reference files was producing degraded context in subsequent sessions. The new rules push canon synchronization into the brief workflow itself, removing operator overhead while preserving operator curation authority. Three patterns layered: (1) every brief specifies its own canon updates explicitly, (2) Cascade scans before reporting done to catch unspecified drift, (3) chat-only sessions can produce session-close briefs (like this one, Brief 4.6) when needed.
+
+## 2026-05-17 — Hero visual restructure (locked, supersedes 2026-05-16 Hero dashboard placement)
+
+The Hero is restructured to single-column composition. Removed from the Hero render tree:
+
+- DashboardFrame component (now reserved for Section 4, Command Deck)
+- Revenue/cash sidebar (reserved for Section 4)
+- Watchdog agent activity strip (reserved for Section 5, Watchdog)
+- Full XRayGuarantee callout (replaced by a compressed trust line)
+
+The risk banner remains as the Hero's sole visual proof element. It carries the dollar-quantified pain claim that anchors the page's positioning.
+
+Reasoning: showing the dashboard, sidebar, and agent strip in the Hero pre-spends each subsequent product section's signature visual. Each product section now owns its own visual proof — Section 4 reveals the Command Deck for the first time, Section 5 reveals the Watchdog loop for the first time. The Hero's job becomes positioning + risk articulation, not product display. Restraint reads as confidence; visual density reads as overselling.
+
+## 2026-05-17 — X-Ray Guarantee placement (layered, locked)
+
+The X-Ray Guarantee appears in three layered forms:
+
+1. Hero — compressed single-line trust mark: BACKED BY THE X-RAY GUARANTEE
+   JetBrains Mono 10px, 0.22em letter-spacing, ink-tertiary, uppercase, centered.
+   Above the primary CTA. Functions as a trust signal, not a callout.
+
+2. X-Ray section (Section 3) — full XRayGuarantee callout with canonical paragraph:
+   "If the X-Ray we deliver doesn't surface money leaks worth significantly more than
+   what you've paid us for it, we'll walk you through why and refund the difference."
+   Bordered horizontal panel with amber accent, styled per the existing component.
+
+3. Method page (Brief 13, not yet built) — full canonical text plus reasoning:
+   why the Guarantee exists, what conditions trigger a refund, how the dollar
+   threshold gets evaluated.
+
+Each appearance does a different job. The Hero version is the trust mark for
+bouncing visitors. The X-Ray section version is the product-contextual full claim.
+The Method page version is the depth treatment for methodical evaluators.
+
+Reasoning: full-paragraph callout in the Hero competed visually with the CTA button
+and read as defensive repetition when the same text appeared again in the X-Ray
+section. Layered approach preserves the trust mechanism at every reading depth
+without redundancy.
+
+## 2026-05-17 — X-Ray timing language (removed, locked)
+
+All timing claims removed from X-Ray section copy. Previous "three weeks" language
+was inaccurate. The website does not state X-Ray timing until the operator has
+concrete data from completed engagements to support a specific claim. Replacement
+phrasing focuses on what the X-Ray does, not how long it takes:
+
+"We evaluate your business. We assess your risks. You get a written report with
+our findings, our confidence levels, the dollar math behind each one, and our
+recommended order of operations."
+
+This honors the operator's "be honest about what we know" principle. Specific
+timing can be added in a future revision once it's defensible with real engagement
+data.
