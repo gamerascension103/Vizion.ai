@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Vizion Corp AI",
-  description: "Captain's Method — Four-phase engagement",
+  description: "Money leaks, made visible.",
   icons: {
     icon: '/favicon.svg',
   },
