@@ -485,3 +485,23 @@ recommended order of operations."
 This honors the operator's "be honest about what we know" principle. Specific
 timing can be added in a future revision once it's defensible with real engagement
 data.
+
+## 2026-05-17 — Centered composition for body sections (provisional, pending operator review)
+
+Pain and X-Ray sections converted from left-aligned to centered composition. Prose column tightened to 560px max-width for centered legibility. Visual elements (PCORD diagram, sample finding artifact, X-Ray Guarantee callout, Dashboard) stay at wider widths (~760-880px) because they're horizontal visual elements that benefit from width.
+
+Command Deck section built centered from the start, matching the new pattern.
+
+Reasoning: Hero (post-Brief 05.5) is centered single-column composition. The homepage Header is centered ceremonial composition. Pain and X-Ray were left-aligned, creating visual inconsistency. "Centered all the way" is the operator decision. Body prose at 560px stays legible centered; wider columns at 760px would slow reading speed by ~15-20%.
+
+This pattern is PROVISIONAL pending operator perceptual review across all three converted sections. If the pattern works at scale, a future canon-sync brief will formalize it in design_canon.md as the default body section composition. Until then, future briefs should build new sections centered with the same column-width pattern, but the canon is not yet locked.
+
+## 2026-05-17 — Section 4 (The Command Deck) shipped (locked)
+
+Section 4 built below Section 3 (X-Ray). Composition: eyebrow (THE PRODUCT · TWO), 52px header (The Command Deck.), single short opening paragraph, full-breakout Dashboard component at ~880px max-width as the section centerpiece, single closing paragraph with ink-secondary-bright accent on "You log in.", transition line pointing forward to Watchdog.
+
+The Dashboard component (previously in Hero, removed by Brief 05.5) is now imported and consumed by CommandDeck.tsx. This is its first appearance on the page post-restructure. The Dashboard's content (leaks panel, month sidebar, agent strip) is unchanged from prior briefs.
+
+Section's job: visually demonstrate "built from the ground up" through the Dashboard itself rather than through explanatory prose. The dashboard carries the argument. Prose is restrained.
+
+Transition line previews Section 5 (Watchdog): "Watching the deck for what needs your attention — that's Watchdog's job." Prepares the buyer for the Watchdog reveal without naming Section 5 explicitly.

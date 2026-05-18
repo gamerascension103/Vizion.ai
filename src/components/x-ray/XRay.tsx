@@ -4,8 +4,8 @@ import { XRayGuarantee } from '@/components/shared/XRayGuarantee'
 
 export function XRay() {
   return (
-    <section className="bg-ground pt-24 px-12 pb-24 max-[720px]:pt-16 max-[720px]:px-5 max-[720px]:pb-16">
-      <div style={{ maxWidth: '760px' }}>
+    <section className="bg-ground pt-24 px-12 pb-24 max-[720px]:pt-16 max-[720px]:px-5 max-[720px]:pb-16 flex flex-col items-center">
+      <div style={{ maxWidth: '760px', width: '100%' }}>
         {/* Eyebrow */}
         <p style={eyebrowStyle}>THE PRODUCT · ONE</p>
 
@@ -18,7 +18,7 @@ export function XRay() {
         </h2>
 
         {/* Opening prose */}
-        <div style={{ maxWidth: '640px' }}>
+        <div style={{ maxWidth: '560px', marginLeft: 'auto', marginRight: 'auto' }}>
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
             We read your books and find where your business is leaking money.
           </p>
@@ -38,7 +38,7 @@ export function XRay() {
         <div style={{ height: '48px' }} />
 
         {/* How it works prose */}
-        <div style={{ maxWidth: '640px' }}>
+        <div style={{ maxWidth: '560px', marginLeft: 'auto', marginRight: 'auto' }}>
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
             We start with 95 risk variables that cover the ways businesses lose money. PCORD sorts them into five areas. Then we use industry-specific data and your own books to find the variables that matter most for your business &mdash; the leaks that cost the most, the ones most likely hitting you, and the ones you should fix first.
           </p>
@@ -55,7 +55,7 @@ export function XRay() {
         <div style={{ height: '36px' }} />
 
         {/* Closing prose */}
-        <div style={{ maxWidth: '640px' }}>
+        <div style={{ maxWidth: '560px', marginLeft: 'auto', marginRight: 'auto' }}>
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
             We evaluate your business. We assess your risks. You get a written report with our findings, our confidence levels, the dollar math behind each one, and our recommended order of operations.
           </p>
@@ -100,6 +100,7 @@ const eyebrowStyle = {
   textTransform: 'uppercase',
   fontWeight: 500,
   margin: '0 0 24px',
+  textAlign: 'center',
 } as const
 
 const headerStyle = {
@@ -109,6 +110,7 @@ const headerStyle = {
   lineHeight: 1.05,
   color: 'var(--color-ink-primary)',
   margin: '0 0 36px',
+  textAlign: 'center',
 } as const
 
 const paragraphStyle = {
@@ -118,4 +120,5 @@ const paragraphStyle = {
   color: 'var(--color-ink-secondary)',
   margin: '0 0 18px',
   letterSpacing: '-0.003em',
+  textAlign: 'center',
 } as const

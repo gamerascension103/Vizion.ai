@@ -1,9 +1,9 @@
 export function Pain() {
   return (
     <section
-      className="bg-ground text-ink-primary pt-[80px] px-12 pb-24 max-[720px]:pt-14 max-[720px]:px-7 max-[720px]:pb-[72px]"
+      className="bg-ground text-ink-primary pt-[80px] px-12 pb-24 max-[720px]:pt-14 max-[720px]:px-7 max-[720px]:pb-[72px] flex flex-col items-center"
     >
-      <div style={{ maxWidth: '760px' }}>
+      <div style={{ maxWidth: '760px', width: '100%' }}>
         {/* Eyebrow */}
         <p
           style={{
@@ -14,6 +14,7 @@ export function Pain() {
             textTransform: 'uppercase',
             fontWeight: 500,
             margin: '0 0 24px',
+            textAlign: 'center',
           }}
         >
           The problem
@@ -29,13 +30,14 @@ export function Pain() {
             lineHeight: 1.08,
             color: 'var(--color-ink-primary)',
             margin: '0 0 36px',
+            textAlign: 'center',
           }}
         >
           You can feel it. You can&rsquo;t see it.
         </h2>
 
         {/* Body block */}
-        <div style={{ maxWidth: '640px' }}>
+        <div style={{ maxWidth: '560px', marginLeft: 'auto', marginRight: 'auto' }}>
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
             You opened QuickBooks this morning. Revenue is down. Not catastrophically &mdash; eight percent, maybe twelve. Enough to notice. Not enough to explain.
           </p>
@@ -80,6 +82,7 @@ const paragraphStyle = {
   color: 'var(--color-ink-secondary)',
   margin: '0 0 18px',
   letterSpacing: '-0.003em',
+  textAlign: 'center',
 } as const
 
 const hingeStyle = {
@@ -90,4 +93,5 @@ const hingeStyle = {
   color: 'var(--color-ink-primary)',
   margin: '28px 0 28px',
   letterSpacing: '-0.01em',
+  textAlign: 'center',
 } as const

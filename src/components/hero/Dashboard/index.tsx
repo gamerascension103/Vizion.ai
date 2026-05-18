@@ -6,7 +6,7 @@ import { AgentStrip } from './AgentStrip'
 export function Dashboard() {
   return (
     <div
-      className="mt-8 rounded-[4px] overflow-hidden bg-surface-1"
+      className="rounded-[4px] overflow-hidden bg-surface-1"
       style={{
         border: '0.5px solid var(--color-rule-primary)',
         animation: 'vh-rise 0.6s cubic-bezier(0.16,1,0.3,1) 1.15s both',
