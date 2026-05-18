@@ -307,3 +307,83 @@ The dashboard's internal content (the five ranked leaks, the monthly + annual co
 ---
 
 *Append new entries below. Don't edit historic entries — supersede with a new dated entry instead.*
+
+## 2026-05-17 — Website architecture (locked)
+
+Hybrid five-page model:
+- `/` (Homepage — 8 sections: Hero, Pain, The X-Ray, The Command Deck, Watchdog, How an engagement starts, Founders, Final CTA)
+- `/about` (Jake and Kyle, partnership, thinking behind Vizion)
+- `/method` (PCORD framework, engagement arc, handler-approval model, X-Ray Guarantee at depth)
+- `/pricing` (Founders Plan and On-Demand Flex, public for v1)
+- `/questions` (FAQ with anchor URLs per question)
+
+Plus conversion endpoint at `/start`.
+
+Reasoning: B2B at this ticket size requires multi-stakeholder content. Champion-share is a real use case — a current Vizion conversation lead needs to send specific URLs to specific stakeholders (CEO sees About, CFO reads Method, skeptic reads Questions). Each page can stand alone as an entry point. Single-page architecture loses 30-50% of potential conversion at this ticket size per the research.
+
+Pricing public for v1 — tradeoff acknowledged: invites comparison shopping against MSP services that aren't actually competitive. Acceptable for first 2-3 conversations. Revisit if pricing surface becomes a sales-conversation friction point.
+
+Deferred from v1: blog, customer/case studies page (no completed engagements yet), industry-specific pages, separate product pages for X-Ray / Command Deck / Watchdog.
+
+Full architecture reasoning in `website_architecture_v1.md`.
+
+## 2026-05-17 — Method page name (locked)
+
+Page 3 is named "Method" in nav and URL (`/method`).
+
+Reason: shorter than "How we work," more confident, aligns with consulting register, signals "we have a named approach" rather than "here's our process." The Pricing Sheet already references "our PCORD framework" — "Method" gives that framework a structural home on the site.
+
+## 2026-05-17 — Conversion endpoint mechanism (locked)
+
+Primary CTA `START A CONVERSATION` routes to `/start`. The `/start` page presents:
+
+- **Primary option:** Cal.com calendar booking, 45-minute call. One-click commitment to a specific time slot.
+- **Secondary option:** "Send us a note instead" — a short form (name, company, brief message). Form submission goes to `team@vizioncorp.ai`.
+
+Phone (`281-315-0441`) and email (`team@vizioncorp.ai`) remain on every page footer as the trust-document register requires. The Welcome Packet PDF retains phone/email only, no calendar — it serves a different moment and audience.
+
+Reason: layered CTA preserves the operator-grade trust register through the footer while making the higher-conversion calendar option available to cold visitors. Phone/email-only on the site would leave conversion on the table for register reasons that footer placement already solves. Calendar-booking CTAs convert 8-15% on B2B service pages vs 2-5% for phone/email; the gap is context-switch friction at the conversion moment.
+
+Mechanism: Cal.com embedded (or equivalent). Kyle's calendar receives the booking; Jake CC'd via Cal.com notification settings. Form goes to `team@vizioncorp.ai` with Jake and Kyle both on the distribution.
+
+Operator-side blocker: Kyle creates a Cal.com account, configures a 45-minute call event, shares the URL/embed code before Brief 11 (conversion endpoint) ships.
+
+## 2026-05-17 — Centered-pin header (locked)
+
+Two-pattern header system shipped in Brief 4.5:
+
+- **Homepage variant** (`<Header variant="homepage" />`): ceremonial centered insignia pin (72px) → wordmark → "Money leaks, made visible" descriptor → horizontal rule → nav row with right-aligned amber CTA. Not sticky.
+- **Inner page variant** (`<Header variant="inner" />`): compressed left-aligned lockup (small pin + wordmark inline) → nav links + right-aligned CTA in single row. Sticky with backdrop-blur (`rgba(11, 13, 17, 0.85)` + `blur(8px)`).
+- **Mobile (both variants, below 720px):** compressed bar with small pin + wordmark on the left and hamburger on the right. Hamburger opens full-viewport overlay with stacked nav links and CTA button.
+
+Nav links across both variants: `Method`, `About`, `Pricing`, `Questions`.
+
+Reason: homepage feels ceremonial as the brand's entry moment; inner pages conserve vertical space for depth content; mobile prioritizes content access over brand performance. Cascade picked Option B (page-level variant selection in pages, not layout) for cleanest server/client boundaries.
+
+## 2026-05-17 — ink-secondary-bright token (locked)
+
+Color `#C2BBA8` is formally adopted as `ink-secondary-bright`. Used for emphasis spans within body copy that need to lift slightly above `ink-secondary` (`#A39C8C`) without going to `ink-primary` (`#EDE6D5`) or `signal-agent` amber.
+
+Usage pattern: `<span style={{ color: 'var(--ink-secondary-bright)' }}>` on specific phrases within body paragraphs. Maximum two uses per section.
+
+First appeared in the Pain section (Brief 04) on "But something is off" and "That's where the money goes. That's where it stays gone." — both serving as load-bearing emphasis lines.
+
+Formalized in `design_canon.md` as part of Brief 4.6.
+
+## 2026-05-17 — Customer-facing documents canonical (locked)
+
+The Welcome Packet, Pricing Sheet, and Readahead PDFs (versions: Welcome Packet 6, Readahead V2, Pricing 4) are formally the canonical source of voice and content for the site. Site copy should *match* the voice of these documents, not aspire to it. Specifically:
+
+- **Voice register:** plain-spoken, operator-grade, restrained. Sentences are short. Em-dashes used sparingly. No marketing-vocabulary.
+- **In-house terms:** The X-Ray, The Command Deck, Watchdog, handler, PCORD, X-Ray Guarantee. All capitalized and used per the documents.
+- **Specific phrases that carry doctrine and should appear on the site verbatim:**
+ - "We don't ask you to trust the AI. We ask you to trust the loop." (Watchdog section, Brief 07)
+ - "Money leaks, made visible." (brand descriptor, locked 2026-05-14)
+ - "If the X-Ray we deliver doesn't surface money leaks worth significantly more than what you've paid us for it, we'll walk you through why and refund the difference." (X-Ray Guarantee, locked 2026-05-16, appears in hero and method page)
+ - "Keeping you ahead of the competition is the point." (Welcome Packet closing — candidate for final CTA section, Brief 10)
+
+## 2026-05-17 — Canon update discipline (locked)
+
+Mandatory `## Canon updates` section in every brief. Pre-completion canon scan rule. Canon writes are mechanical, not interpretive. Session-close brief format. Full rules in `.windsurfrules` under "Canon update discipline" section, added Brief 4.6.
+
+Reason: canon drift between chat and reference files was producing degraded context in subsequent sessions. The new rules push canon synchronization into the brief workflow itself, removing operator overhead while preserving operator curation authority. Three patterns layered: (1) every brief specifies its own canon updates explicitly, (2) Cascade scans before reporting done to catch unspecified drift, (3) chat-only sessions can produce session-close briefs (like this one, Brief 4.6) when needed.

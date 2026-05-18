@@ -196,3 +196,72 @@ If a decision needs to be made — visual, copy, or architectural — the chat m
 - Does not ship lorem ipsum, placeholder text, or stock photography
 - Does not load third-party scripts beyond what's in `decisions_log.md`
 - Does not draft client-facing communications of any kind
+
+---
+
+## Canon update discipline
+
+The project maintains a small set of canonical reference files. These files are the source of truth for future sessions. When they drift out of sync with reality, the next session reads stale context and produces degraded work.
+
+### Canon files
+
+These files are canon-bearing. Updates to them are not "documentation"; they are part of the work product:
+
+- `decisions_log.md` — locked decisions, append-only, dated entries
+- `design_canon.md` — visual system, typography, component patterns, color tokens
+- `how_we_work.md` — operator preferences, role split, brief structure, workflow norms
+- `positioning.md` — locked customer-facing positioning, in-house vocabulary, retired-language list
+- `website_architecture_v1.md` — page-and-section architecture, URL structure, navigation
+- `.windsurfrules` — this file; rules Cascade operates under
+- `BUILD_LOG.md` — append-only log of shipped briefs
+
+### Rule 1 — Mandatory `## Canon updates` section in every brief
+
+Every brief Cascade receives must contain a section titled `## Canon updates` near the end (immediately before `## Verification` or `## Build log`). This section must explicitly state one of:
+
+- **`None`** — the brief does no canon-bearing work
+- **A list of specific updates** with exact text to add and exact file paths
+
+Cascade writes these updates as part of the brief's mechanical work. The chat writes the exact canonical text; Cascade only pastes it into the file. Cascade does not paraphrase, summarize, or rewrite canon update text.
+
+**If a brief arrives without a `## Canon updates` section, Cascade pauses and asks the chat (via Jake) whether canon updates are needed.** Do not proceed without explicit acknowledgment that no updates are needed.
+
+### Rule 2 — Pre-completion canon scan
+
+Before reporting any brief as "done," Cascade performs a final scan with the following question:
+
+> Did this brief's work — the code changes, the build log entry, the decisions made during implementation, the judgment calls flagged — produce any reality that the canon files now don't reflect?
+
+Specifically check for:
+
+- **New locked decisions:** any choice during the brief that becomes a binding rule.
+- **New tokens or design patterns:** any color, spacing, or component pattern introduced during the brief that isn't in `design_canon.md`.
+- **Workflow changes:** any judgment call about how briefs are structured, how verification works, or how the chat-Cascade-operator roles interact that should update `how_we_work.md`.
+- **Retired language:** any vocabulary purge or term replacement that should update `positioning.md`'s retired-language list.
+- **Architecture changes:** any new page, route, section structure, or navigation decision that should update `website_architecture_v1.md`.
+
+If any of these are true and weren't already covered in the `## Canon updates` section, Cascade reports them in the build log entry as **`canon_drift_detected:`** followed by a one-line description, and asks Jake whether to write the update or defer.
+
+### Rule 3 — Canon writes are mechanical, not interpretive
+
+When Cascade writes to a canon file, it pastes the exact text the brief specifies. Cascade does not:
+
+- Paraphrase decision-log entries to be "clearer"
+- Reorganize sections in `design_canon.md` while making an addition
+- Summarize `how_we_work.md` updates
+- Editorialize on rule additions in `.windsurfrules` 
+
+The chat is responsible for the canonical wording. Cascade is responsible for getting that wording into the correct file at the correct location.
+
+**Exception:** if the brief's canon update text contains a clear typo (a misspelled color hex, a duplicated word, a malformed markdown header), Cascade may correct the obvious mechanical error and flag the correction in the build log. Cascade does NOT fix things that look like judgment calls — only mechanical errors.
+
+### Rule 4 — Session-close briefs
+
+Occasionally a chat session produces decisions, architecture refinements, or rule changes without producing a code brief. For those sessions, the chat may produce a "session-close brief" whose only purpose is canon updates. These briefs:
+
+- Have no code changes
+- Have minimal or "n/a" Pre-flight, Architecture, and What's changing sections beyond canon-write instructions
+- Have a fully populated `## Canon updates` section
+- Are run through Cascade like any other brief
+
+Session-close briefs are recognized by the title pattern `Session-close brief — YYYY-MM-DD` or `Brief NN.5 — Canon sync` or `Brief NN.6 — Canon sync`.

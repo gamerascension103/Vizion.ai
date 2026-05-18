@@ -101,6 +101,7 @@ The complete palette. Always reference by token, not hex, in code.
 | `rule-inner` | `#1A1E25` | Inner divisions within a panel |
 | `ink-primary` | `#EDE6D5` | Body text, primary copy, hook pivot line 1 |
 | `ink-secondary` | `#A39C8C` | Sub copy, hook fragments, secondary values |
+| `ink-secondary-bright` | `#C2BBA8` | Emphasis spans in body copy; lifts above ink-secondary without reaching ink-primary or signal-agent. Max two uses per section. |
 | `ink-tertiary` | `#8A8F99` | Labels, captions, nav links |
 | `ink-quaternary` | `#5E6168` | Metadata, timestamps, ultra-quiet supporting text |
 | `signal-agent` | `#F2B33D` | AI agent indicators, active status, eyebrow, hook pivot line 2 |
@@ -112,6 +113,16 @@ The complete palette. Always reference by token, not hex, in code.
 - Don't use `signal-agent` or `signal-leak` on more than one element class per section. Two amber things in a viewport dilutes the signal.
 - Don't use bright pure red. Signal-leak is amber-red on purpose.
 - Don't use cyan, teal, or electric blue. That's the field's vocabulary; we don't speak it.
+
+**`ink-secondary-bright` usage note:**
+
+ink-secondary-bright: #C2BBA8
+
+Use: emphasis spans within body copy that need to lift slightly above ink-secondary without going to ink-primary or signal-agent. Apply via `<span style={{ color: 'var(--ink-secondary-bright)' }}>` on specific phrases.
+
+Maximum two uses per section. Sits between ink-secondary (#A39C8C) and ink-primary (#EDE6D5) on the warmth ramp.
+
+First used in the Pain section (Brief 04) on "But something is off" and "That's where the money goes. That's where it stays gone." Both serve as load-bearing emphasis lines within body prose.
 
 ---
 
