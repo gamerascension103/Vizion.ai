@@ -16,6 +16,7 @@ const config: Config = {
         "rule-inner": "#1A1E25",
         "ink-primary": "#EDE6D5",
         "ink-secondary": "#A39C8C",
+        "ink-secondary-bright": "#C2BBA8",
         "ink-tertiary": "#8A8F99",
         "ink-quaternary": "#5E6168",
         "signal-agent": "#F2B33D",

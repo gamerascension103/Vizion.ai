@@ -4,7 +4,7 @@ import { Hook } from './Hook'
 import { Sub } from './Sub'
 import { RiskBanner } from './RiskBanner'
 import { Dashboard } from './Dashboard'
-import { XRayGuarantee } from './XRayGuarantee'
+import { XRayGuarantee } from '@/components/shared/XRayGuarantee'
 import { CTAs } from './CTAs'
 
 export function Hero() {

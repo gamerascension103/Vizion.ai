@@ -382,6 +382,50 @@ The Welcome Packet, Pricing Sheet, and Readahead PDFs (versions: Welcome Packet 
  - "If the X-Ray we deliver doesn't surface money leaks worth significantly more than what you've paid us for it, we'll walk you through why and refund the difference." (X-Ray Guarantee, locked 2026-05-16, appears in hero and method page)
  - "Keeping you ahead of the competition is the point." (Welcome Packet closing — candidate for final CTA section, Brief 10)
 
+## 2026-05-17 — PCORD diagram pattern (locked)
+
+Visual pattern for rendering the PCORD framework on the website:
+
+Five-column horizontal layout (desktop), with each column composed of:
+- Letter cap in Inter Tight 600, 48px, signal-agent amber (#F2B33D)
+- 12px gap
+- Bucket name in Inter Tight 500, 18px, ink-primary, centered
+- 8px gap
+- Descriptor in Inter Tight 400, 13px, ink-tertiary, centered, max-width 120px
+
+Contained in surface-1 panel with 1px rule-primary border, padding 40px 32px.
+
+Below diagram (within same panel), canonical methodology line:
+"5 areas · 95 risk variables · confidence levels on every finding"
+JetBrains Mono 11px, 0.14em letter-spacing, ink-tertiary, centered.
+
+Bucket content is verbatim from positioning.md. Do not paraphrase.
+
+Responsive: two-row layout at tablet (720-959px), vertical stack at mobile (below 720px). Mobile pattern reads as a list, not a grid — letter cap on left, name + descriptor stacked on right.
+
+First used in Brief 05 (The X-Ray section). May appear on /method page in Brief 13. Should not appear anywhere else without explicit operator decision.
+
+## 2026-05-17 — Sample X-Ray finding artifact pattern (locked)
+
+Visual pattern for rendering sample X-Ray output on the website:
+
+Surface-1 panel with 0.5px rule-primary border. Top toolbar matching the dashboard frame pattern from the hero — surface-2 background, 0.5px rule-inner bottom border, 40px height. Left tag in signal-agent amber, center title in ink-secondary, right SAMPLE badge in ink-quaternary with neutral border.
+
+Body composed of finding rows. Each row:
+- 24px 28px padding
+- 0.5px rule-inner bottom border
+- Three-column grid: number (40px), content (1fr), annual cost (140px right)
+- Number in JetBrains Mono 20px, ink-quaternary
+- Title in Inter Tight 18px, 500, ink-primary
+- Two badges below title (PCORD category + confidence)
+- Detail paragraph in Inter Tight 14px, ink-secondary
+- Annual cost in JetBrains Mono 22px, 500, signal-leak, right-aligned, with U+2212 minus sign
+
+Bottom caption (within panel) in JetBrains Mono 11px, ink-tertiary:
+"Sample only · Real X-Ray reports include 8-15 findings, ranked by recovery priority"
+
+First used in Brief 05 (The X-Ray section). Real findings (from completed engagements) will replace samples once they exist. The pattern carries forward as the template for the production "case study" page deferred from v1.
+
 ## 2026-05-17 — Canon update discipline (locked)
 
 Mandatory `## Canon updates` section in every brief. Pre-completion canon scan rule. Canon writes are mechanical, not interpretive. Session-close brief format. Full rules in `.windsurfrules` under "Canon update discipline" section, added Brief 4.6.

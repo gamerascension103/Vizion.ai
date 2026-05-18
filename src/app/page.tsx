@@ -1,6 +1,7 @@
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero/Hero'
 import { Pain } from '@/components/pain'
+import { XRay } from '@/components/x-ray'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header variant="homepage" />
       <Hero />
       <Pain />
+      <XRay />
     </>
   )
 }

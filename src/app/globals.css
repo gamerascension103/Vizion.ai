@@ -10,6 +10,7 @@
   --color-rule-inner: theme('colors.rule-inner');
   --color-ink-primary: theme('colors.ink-primary');
   --color-ink-secondary: theme('colors.ink-secondary');
+  --color-ink-secondary-bright: theme('colors.ink-secondary-bright');
   --color-ink-tertiary: theme('colors.ink-tertiary');
   --color-ink-quaternary: theme('colors.ink-quaternary');
   --color-signal-agent: theme('colors.signal-agent');
