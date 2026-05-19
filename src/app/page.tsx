@@ -4,6 +4,7 @@ import { Pain } from '@/components/pain'
 import { XRay } from '@/components/x-ray'
 import { CommandDeck } from '@/components/command-deck'
 import { Watchdog } from '@/components/watchdog'
+import { Engagement } from '@/components/engagement'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <XRay />
       <CommandDeck />
       <Watchdog />
+      <Engagement />
     </>
   )
 }

@@ -654,3 +654,63 @@ period-driven short sentences as their dominant rhythm pattern. The
 "Could be you. Could be someone on your team." construction in the
 Welcome Packet is the canonical voice template that the em dash
 replacements follow.
+
+## 2026-05-18 — Section 6 (How an engagement starts) shipped (locked)
+
+Section 6 built below Section 5 (Watchdog). Engagement composition:
+eyebrow (THE ENGAGEMENT, deliberately not following the THE PRODUCT · N
+convention since this section is not a product), 52px header ("How an
+engagement starts." with period), one opening paragraph, EngagementSequence
+component at 1080px breakout (four-state linear sequence: conversation →
+X-Ray → decision → build), two closing paragraphs with one ink-secondary-
+bright accent on "Then you decide what happens next.", and transition
+line "Two people. Two veterans. Both on the phone every time." previewing
+the Founders section.
+
+Total prose ~210 words. Lighter than X-Ray, Command Deck, and Watchdog
+because the visual carries most of the argument. The buyer scans the four
+phases, then reads the prose for context.
+
+Voice register matches preceding sections. Period-driven rhythm per the
+em dash removal in Brief 07.5. Opening line "Not a sales pitch" borrows
+the Readahead PDF's canonical framing for voice continuity. Closing
+phrase "the same two people on the phone every time" paraphrases the
+Welcome Packet's "On every engagement, you talk to both of us."
+
+## 2026-05-18 — EngagementSequence diagram pattern (provisional, pending operator review)
+
+New visual pattern for rendering the engagement arc on the website:
+
+Four-state linear sequence rendered horizontally at desktop with arrows
+between states. No curved return arrow (engagement is linear, not cyclical).
+Each state composed identically to the trust loop diagram's states:
+numbered tag (01-04) in JetBrains Mono ink-quaternary, state label in
+Inter Tight 500 18px ink-primary, sub-label in Inter Tight 400 13px
+ink-tertiary, all centered within state column.
+
+States:
+- 01 The conversation — Forty-five minutes. We talk, we listen, we decide together.
+- 02 The X-Ray — We dig into your books and surface the leaks.
+- 03 The decision — You see the report. You decide what happens next.
+- 04 The build — Command Deck designed. Watchdog trained. Monthly rhythm begins.
+
+Contained in surface-1 panel with 1px rule-primary border, padding
+48px 40px, max-width 1080px (matching trust loop diagram's breakout
+width and the risk banner's breakout width).
+
+Below diagram: methodology summary line "Four phases · One conversation
+to start · No surprises" in JetBrains Mono ink-tertiary.
+
+Responsive: 2x2 grid at tablet, vertical stack at mobile.
+
+First used in Brief 08 (Engagement section). The visual register
+intentionally mirrors the trust loop diagram but represents a linear
+progression rather than a cycle. The two patterns together establish
+the page's visual language for sequence visualization: cycle (Watchdog's
+runtime loop) and progression (engagement arc). Future briefs introducing
+similar sequence visualizations should default to one of these two
+patterns rather than introducing a third.
+
+Pattern is provisional pending operator review across both diagrams in
+context. May be formalized in design_canon.md in a future canon-sync
+brief if both patterns prove stable.
