@@ -47,7 +47,7 @@ export function Pain() {
           </p>
 
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
-            <span style={{ color: '#C2BBA8' }}>But something is off.</span> You can feel it. You just can&rsquo;t point to it.
+            <span style={{ color: 'var(--color-ink-secondary-bright)' }}>But something is off.</span> You can feel it. You just can&rsquo;t point to it.
           </p>
 
           <p style={hingeStyle}>This is the gap.</p>
@@ -62,7 +62,7 @@ export function Pain() {
 
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
             The leaks are in the gaps between what your bookkeeper handles and what your CPA handles.{' '}
-            <span style={{ color: '#C2BBA8' }}>That&rsquo;s where the money goes. That&rsquo;s where it stays gone.</span>
+            <span style={{ color: 'var(--color-ink-secondary-bright)' }}>That&rsquo;s where the money goes. That&rsquo;s where it stays gone.</span>
           </p>
 
           <p className="text-base max-[720px]:text-[15px]" style={{ ...paragraphStyle, marginBottom: 0 }}>

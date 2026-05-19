@@ -3,6 +3,7 @@ import { Hero } from '@/components/hero/Hero'
 import { Pain } from '@/components/pain'
 import { XRay } from '@/components/x-ray'
 import { CommandDeck } from '@/components/command-deck'
+import { Watchdog } from '@/components/watchdog'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Pain />
       <XRay />
       <CommandDeck />
+      <Watchdog />
     </>
   )
 }

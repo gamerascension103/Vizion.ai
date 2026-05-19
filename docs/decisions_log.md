@@ -549,3 +549,75 @@ between these widths — appropriate because it's a centered-but-not-
 breakout product visual. Future visual breakouts (Watchdog's loop
 diagram in Brief 07, etc.) should default to 1080px unless there's a
 specific reason to use a different width.
+
+## 2026-05-17 — Section 5 (Watchdog) shipped (locked)
+
+Section 5 built below Section 4 (Command Deck). Composition: eyebrow
+(THE PRODUCT · THREE), 52px header (Watchdog.), two opening paragraphs,
+trust loop diagram (new visual pattern at 1080px breakout), doctrine
+prose with canonical "We don't ask you to trust the AI. We ask you to
+trust the loop." accent line, three learning-over-time paragraphs
+(industry baseline, business-specific learning with handler-decides
+control, isolation and ownership with the second ink-secondary-bright
+accent), closing prose, and transition line referencing the X-Ray
+Guarantee as the page's trust anchor.
+
+Total prose ~395 words across four claims (trust loop architecture,
+industry baseline, business learning, isolation). The four-claim structure
+is heavier than X-Ray's three-claim structure (~280 words) because
+Watchdog has more to communicate — it's the most architecturally complex
+product. Section reflects that.
+
+Voice register matches Pain, X-Ray, and Command Deck. Two ink-secondary-
+bright accents at the canon-maximum (one on the doctrine phrase, one on
+the ownership claim). Closing line "That's the deal." echoes the Welcome
+Packet's X-Ray Guarantee closing for canon voice continuity.
+
+## 2026-05-17 — Trust loop diagram pattern (provisional, pending operator review)
+
+New visual pattern for rendering the proposal-approval-execution-debrief
+loop on the website:
+
+Four-state linear sequence rendered horizontally at desktop with arrows
+between states and a curved return arrow below connecting state 04 back
+to state 01. Each state composed of: numbered tag (01-04) in JetBrains
+Mono ink-quaternary, state label in Inter Tight 500 18px ink-primary,
+sub-label in Inter Tight 400 13px ink-tertiary, all centered within
+state column.
+
+States:
+- 01 Watchdog proposes — The agent surfaces what it's seen
+- 02 Handler reviews — A named person approves, modifies, or declines
+- 03 Action executes — Only the approved action — only as approved
+- 04 Outcome logs — Every action becomes part of the audit trail
+
+Contained in surface-1 panel with 1px rule-primary border, padding
+48px 40px, max-width 1080px (matching risk banner breakout width).
+
+Below diagram: methodology summary line "Four states · One handler · No
+autonomous action" in JetBrains Mono ink-tertiary.
+
+Responsive: 2x2 grid at tablet (720-959px), vertical stack at mobile
+(below 720px) with downward chevrons replacing horizontal arrows.
+
+Curved return arrow implemented as inline SVG path with signal-agent
+amber 0.5px stroke and strokeDasharray 4 4. Arrow points from right edge
+(state 04) back to left edge (state 01) with gentle arc below the row.
+Desktop only — hidden at tablet and mobile.
+
+First used in Brief 07 (Watchdog section). May appear on /method page in
+Brief 13 with deeper explanation of each state. Should not appear
+anywhere else without explicit operator decision. Pattern is provisional
+pending operator perceptual review — not yet formalized in design_canon.md.
+
+## 2026-05-17 — ink-secondary-bright token in Pain.tsx (cleanup)
+
+Pain.tsx's raw #C2BBA8 hex literal replaced with var(--color-ink-secondary-bright)
+CSS variable. Token was formalized in Brief 4.6 but Pain.tsx's usage
+predated the formalization. Cleanup folded into Brief 07. Visual rendering
+identical; codebase now consistent in using the variable rather than the
+raw hex literal across all components that reference this color.
+
+If any other components (XRay.tsx, CommandDeck.tsx) also use the raw
+#C2BBA8 hex literal rather than the variable, they were already corrected
+during their respective brief work. Pain.tsx was the only outstanding case.
