@@ -20,7 +20,7 @@ export function Watchdog() {
         </p>
 
         <p className="text-base max-[720px]:text-[15px]" style={{ ...paragraphStyle, marginBottom: 0 }}>
-          When something looks off, Watchdog doesn&rsquo;t fix it. It proposes. Your handler &mdash; you, or someone on your team &mdash; reviews what Watchdog wants to do. Approves it, modifies it, or declines.
+          When something looks off, Watchdog doesn&rsquo;t fix it. It proposes. Your handler reviews what Watchdog wants to do. Could be you. Could be someone on your team. Approves it, modifies it, or declines.
         </p>
       </div>
 
@@ -36,7 +36,7 @@ export function Watchdog() {
         </p>
 
         <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
-          The loop is the architecture. Watchdog can&rsquo;t act without a handler&rsquo;s approval. That&rsquo;s not a feature we added &mdash; it&rsquo;s how the system is built. There&rsquo;s no &ldquo;auto-approve mode&rdquo; you can flip on later. There&rsquo;s no override. Every action goes through a person who can say no.
+          The loop is the architecture. Watchdog can&rsquo;t act without a handler&rsquo;s approval. That&rsquo;s not a feature we added. It&rsquo;s how the system is built. There&rsquo;s no &ldquo;auto-approve mode&rdquo; you can flip on later. There&rsquo;s no override. Every action goes through a person who can say no.
         </p>
 
         <p className="text-base max-[720px]:text-[15px]" style={{ ...paragraphStyle, marginBottom: 0 }}>
@@ -47,7 +47,7 @@ export function Watchdog() {
       {/* Learning-over-time prose — 560px column */}
       <div style={{ maxWidth: '560px', width: '100%', textAlign: 'center', marginTop: '56px' }}>
         <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
-          Every Watchdog starts with industry knowledge. Before it sees your books, it&rsquo;s already calibrated against the patterns common to your industry &mdash; the leaks specific to wholesale distribution, or manufacturing, or services, or whatever you do. The starting point isn&rsquo;t generic.
+          Every Watchdog starts with industry knowledge. Before it sees your books, it&rsquo;s already calibrated against the patterns common to your industry. The leaks specific to wholesale distribution, or manufacturing, or services, or whatever you do. The starting point isn&rsquo;t generic.
         </p>
 
         <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
@@ -66,7 +66,7 @@ export function Watchdog() {
       {/* Closing prose — 560px column */}
       <div style={{ maxWidth: '560px', width: '100%', textAlign: 'center', marginTop: '56px' }}>
         <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
-          The industry intelligence improves across our client base. Your Watchdog gets the benefit of that &mdash; on every update, with your approval. The business intelligence stays yours. It doesn&rsquo;t leave your environment. It doesn&rsquo;t cross-pollinate.
+          The industry intelligence improves across our client base. Your Watchdog gets the benefit of that. On every update. With your approval. The business intelligence stays yours. It doesn&rsquo;t leave your environment. It doesn&rsquo;t cross-pollinate.
         </p>
 
         <p className="text-base max-[720px]:text-[15px]" style={{ ...paragraphStyle, marginBottom: '40px' }}>

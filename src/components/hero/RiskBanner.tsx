@@ -48,7 +48,7 @@ export function RiskBanner() {
           Annualized cost of identified leaks across a representative mid-market operation.
         </p>
         <span className="mt-1 font-mono text-[9px] font-medium tracking-[0.16em] uppercase text-ink-quaternary">
-          Sample — not your data
+          Sample &middot; not your data
         </span>
       </div>
 

@@ -621,3 +621,36 @@ raw hex literal across all components that reference this color.
 If any other components (XRay.tsx, CommandDeck.tsx) also use the raw
 #C2BBA8 hex literal rather than the variable, they were already corrected
 during their respective brief work. Pain.tsx was the only outstanding case.
+
+## 2026-05-18 — Em dashes retired from customer-facing copy (locked)
+
+All em dash characters (U+2014, —) and HTML entities (&mdash;) removed
+from website copy. Replaced with period-driven short sentences following
+the canonical voice register of the Welcome Packet, Pricing Sheet, and
+Readahead PDFs.
+
+Replacement patterns applied:
+- Parenthetical em dashes → "Could be X. Could be Y." short-sentence
+  constructions
+- Idea-continuation em dashes → period replacement
+- Two-clause connection em dashes → period replacement
+- Trailing clarification em dashes → period replacement (multiple short
+  sentences) or absorbed into main sentence with comma where cleaner
+- Compact label separators → middle dot (·, U+00B7) matching the
+  canonical THE COMMAND DECK · SAMPLE register
+
+The em dash character is now in the forbidden vocabulary list in
+.windsurfrules. Future briefs containing em dashes in customer-facing
+copy will fail Cascade's mechanical grep check.
+
+Scope: customer-facing JSX/TSX strings only — this includes both
+inline JSX text content and string literals passed as data to
+components, if the string renders visibly to a user. Em dashes in
+code comments ({/* */} or //) are not subject to this rule. Other
+dash-like characters (hyphen, en dash, middle dot) are not affected.
+
+Reason: voice continuity with the canonical PDF artifacts, which use
+period-driven short sentences as their dominant rhythm pattern. The
+"Could be you. Could be someone on your team." construction in the
+Welcome Packet is the canonical voice template that the em dash
+replacements follow.

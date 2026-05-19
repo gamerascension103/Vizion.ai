@@ -38,7 +38,7 @@ export function CommandDeck() {
           className="text-[11px] max-[720px]:text-[10px]"
           style={transitionLineStyle}
         >
-          Watching the deck for what needs your attention &mdash; that&rsquo;s Watchdog&rsquo;s job.
+          Watching the deck for what needs your attention. That&rsquo;s Watchdog&rsquo;s job.
         </p>
       </div>
     </section>

@@ -39,7 +39,7 @@ export function Pain() {
         {/* Body block */}
         <div style={{ maxWidth: '560px', marginLeft: 'auto', marginRight: 'auto' }}>
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
-            You opened QuickBooks this morning. Revenue is down. Not catastrophically &mdash; eight percent, maybe twelve. Enough to notice. Not enough to explain.
+            You opened QuickBooks this morning. Revenue is down. Not catastrophically. Eight percent, maybe twelve. Enough to notice. Not enough to explain.
           </p>
 
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>

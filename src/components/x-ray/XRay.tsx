@@ -40,7 +40,7 @@ export function XRay() {
         {/* How it works prose */}
         <div style={{ maxWidth: '560px', marginLeft: 'auto', marginRight: 'auto' }}>
           <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
-            We start with 95 risk variables that cover the ways businesses lose money. PCORD sorts them into five areas. Then we use industry-specific data and your own books to find the variables that matter most for your business &mdash; the leaks that cost the most, the ones most likely hitting you, and the ones you should fix first.
+            We start with 95 risk variables that cover the ways businesses lose money. PCORD sorts them into five areas. Then we use industry-specific data and your own books to find the variables that matter most for your business. The leaks that cost the most, the ones most likely hitting you, and the ones you should fix first.
           </p>
           <p className="text-base max-[720px]:text-[15px]" style={{ ...paragraphStyle, marginBottom: 0 }}>
             Every threshold we use comes from primary research and industry benchmarks. We tell you our confidence level on every finding.

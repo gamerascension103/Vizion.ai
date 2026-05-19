@@ -32,7 +32,7 @@ export function DashboardBar() {
           THE COMMAND DECK · SAMPLE
         </span>
         <span className="font-mono text-[10px] font-medium tracking-[0.14em] text-ink-tertiary">
-          Command Deck — Acme Distribution
+          Command Deck · Acme Distribution
         </span>
       </div>
 
