@@ -7,8 +7,9 @@ import { CTAs } from './CTAs'
 
 export function Hero() {
   return (
-    <main className="min-h-screen bg-ground pt-[120px] px-12 pb-24 max-[720px]:pt-16 max-[720px]:px-7 max-[720px]:pb-16 max-[380px]:px-5">
-      <div style={{ maxWidth: '760px' }}>
+    <main className="min-h-screen bg-ground pt-[120px] px-12 pb-24 max-[720px]:pt-16 max-[720px]:px-7 max-[720px]:pb-16 max-[380px]:px-5 flex flex-col items-center">
+      {/* Prose column — 760px */}
+      <div style={{ maxWidth: '760px', width: '100%' }}>
         <VeteranStamp />
 
         <div style={{ height: '32px' }} />
@@ -20,9 +21,15 @@ export function Hero() {
         <Hook />
 
         <div style={{ height: '48px' }} />
+      </div>
 
+      {/* Risk banner breakout — 1080px */}
+      <div style={{ maxWidth: '1080px', width: '100%' }}>
         <RiskBanner />
+      </div>
 
+      {/* Prose column continued — 760px */}
+      <div style={{ maxWidth: '760px', width: '100%' }}>
         <div style={{ height: '48px' }} />
 
         <Sub />

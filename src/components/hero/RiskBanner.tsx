@@ -31,7 +31,7 @@ function AnimatedRiskNumber({ delay = 1400 }: { delay?: number }) {
 export function RiskBanner() {
   return (
     <div
-      className="flex flex-wrap items-center justify-between gap-y-4 gap-x-6 rounded-[3px] px-[26px] py-[22px]"
+      className="flex items-center justify-between gap-x-6 rounded-[3px] pl-[26px] pr-[32px] py-[22px] max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-y-4"
       style={{
         background: 'linear-gradient(to right, rgba(227,104,66,0.06), rgba(227,104,66,0.02))',
         border: '0.5px solid var(--color-signal-leak-border)',
@@ -52,10 +52,10 @@ export function RiskBanner() {
         </span>
       </div>
 
-      <div className="flex flex-col items-end">
+      <div className="flex flex-col items-end max-[720px]:items-start">
         <span
           className="font-mono font-medium tabular-nums leading-none text-signal-leak"
-          style={{ fontSize: 'clamp(40px, 5vw, 58px)' }}
+          style={{ fontSize: 'clamp(44px, 6vw, 72px)' }}
         >
           −$<AnimatedRiskNumber />
         </span>

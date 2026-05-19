@@ -13,7 +13,7 @@ export function Hook() {
         {FRAGMENTS.map((text, i) => (
           <p
             key={text}
-            className="font-sans text-[30px] max-sm:text-[26px] font-normal tracking-[-0.022em] text-ink-secondary"
+            className="font-sans text-[30px] max-sm:text-[26px] font-normal tracking-[-0.022em] text-ink-secondary text-center"
             style={{
               animation: `vh-rise 0.6s cubic-bezier(0.16,1,0.3,1) ${FRAGMENT_DELAYS[i]} both`,
             }}
@@ -25,13 +25,13 @@ export function Hook() {
 
       <div className="mt-[14px] flex flex-col gap-0">
         <p
-          className="font-sans text-[44px] max-sm:text-[30px] font-semibold tracking-[-0.032em] text-ink-primary leading-[1.1]"
+          className="font-sans text-[44px] max-sm:text-[30px] font-semibold tracking-[-0.032em] text-ink-primary leading-[1.1] text-center"
           style={{ animation: 'vh-rise 0.6s cubic-bezier(0.16,1,0.3,1) 0.85s both' }}
         >
           The bleed has a number.
         </p>
         <p
-          className="font-sans text-[44px] max-sm:text-[30px] font-semibold tracking-[-0.032em] text-signal-agent leading-[1.1]"
+          className="font-sans text-[44px] max-sm:text-[30px] font-semibold tracking-[-0.032em] text-signal-agent leading-[1.1] text-center"
           style={{ animation: 'vh-rise 0.6s cubic-bezier(0.16,1,0.3,1) 0.85s both' }}
         >
           We find it.

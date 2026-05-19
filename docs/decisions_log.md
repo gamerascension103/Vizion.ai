@@ -505,3 +505,47 @@ The Dashboard component (previously in Hero, removed by Brief 05.5) is now impor
 Section's job: visually demonstrate "built from the ground up" through the Dashboard itself rather than through explanatory prose. The dashboard carries the argument. Prose is restrained.
 
 Transition line previews Section 5 (Watchdog): "Watching the deck for what needs your attention — that's Watchdog's job." Prepares the buyer for the Watchdog reveal without naming Section 5 explicitly.
+
+## 2026-05-17 — Hero centering finalized (locked)
+
+The Hero's outer column is now horizontally centered on the page via flex
+column with align-items: center, matching Pain, X-Ray, and Command Deck.
+Brief 05.5 converted the Hero to single-column composition but left the
+column anchored to the page's left side; Brief 06.5 completes the
+centering.
+
+Internal Hero text elements (eyebrow, hook fragments, pivot lines, sub
+copy) now have text-align: center applied. Hook fragments and pivot lines
+are centered independently (each line centered on its own width) rather
+than as a block — preserves the rising-fragments effect where each beat
+stands on its own.
+
+Veteran stamp, compressed Guarantee line, and CTA button retain their
+existing centered behavior — those were already correctly aligned post-
+Brief 05.5.
+
+## 2026-05-17 — Risk banner breakout width (locked)
+
+Risk banner widened from ~760px max-width to 1080px max-width as a feature
+breakout from the Hero's prose column. The wider treatment gives the
+banner visual weight as the Hero's anchor element — the dollar-quantified
+proof of the page's positioning.
+
+Dollar number font size scaled from ~56-60px to 72px at desktop to match
+the wider treatment. Number's font weight, color (signal-leak #E36842),
+tabular-nums, and animated counter behavior all preserved unchanged.
+
+Banner's internal layout (label left, number right) preserved. The wider
+horizontal space between label and number is intentional — it communicates
+the contrast between the descriptive label and the dollar magnitude.
+
+Mobile: banner collapses to viewport-width minus padding. Number scales
+to 44-48px. Banner may stack vertically (label on top, number below) at
+very narrow widths if side-by-side doesn't fit cleanly.
+
+The 1080px width establishes a pattern: prose columns at 560-760px,
+feature visuals at 1080px. The Command Deck's dashboard at 880px sits
+between these widths — appropriate because it's a centered-but-not-
+breakout product visual. Future visual breakouts (Watchdog's loop
+diagram in Brief 07, etc.) should default to 1080px unless there's a
+specific reason to use a different width.
