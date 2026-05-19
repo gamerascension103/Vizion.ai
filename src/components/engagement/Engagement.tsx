@@ -28,12 +28,12 @@ export function Engagement() {
       {/* Closing prose — 560px column */}
       <div style={{ maxWidth: '560px', width: '100%', textAlign: 'center', marginTop: '56px' }}>
         <p className="text-base max-[720px]:text-[15px]" style={paragraphStyle}>
-          The X-Ray follows the conversation. We pull your data, run the diagnostic, and walk you through what we found. You see every leak, every confidence level, and every dollar number behind every finding.{' '}
-          <span style={{ color: 'var(--color-ink-secondary-bright)' }}>Then you decide what happens next.</span>
+          After the conversation, the engagement begins. The X-Ray comes first. We pull your data, run the diagnostic, and walk you through what we found. Every leak. Every confidence level. Every dollar number behind every finding.
         </p>
 
         <p className="text-base max-[720px]:text-[15px]" style={{ ...paragraphStyle, marginBottom: '40px' }}>
-          If the math doesn&rsquo;t work in your favor, you walk away with the report. If it does, we move into the build. Command Deck designed around your business. Your first Watchdog trained for your most important issue. Monthly check-ins. The same two people on the phone every time.
+          If we haven&rsquo;t surfaced more money than you paid us,{' '}
+          <span style={{ color: 'var(--color-ink-secondary-bright)' }}>the X-Ray Guarantee makes it right.</span>{' '}If we have, we move into the build. Command Deck designed around your business. Your first Watchdog trained for your most important issue. Monthly check-ins. The same two voices on the phone every time.
         </p>
 
         {/* Transition line */}
@@ -41,7 +41,7 @@ export function Engagement() {
           className="text-[11px] max-[720px]:text-[10px]"
           style={transitionLineStyle}
         >
-          Two people. Two veterans. Both on the phone every time.
+          Two people. Both owners. Both on the phone every time.
         </p>
       </div>
     </section>

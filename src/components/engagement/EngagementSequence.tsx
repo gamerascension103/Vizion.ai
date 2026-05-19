@@ -1,7 +1,7 @@
 const STATES = [
-  { num: '01', label: 'The conversation', sub: 'Forty-five minutes. We talk, we listen, we decide together.' },
-  { num: '02', label: 'The X-Ray', sub: 'We dig into your books and surface the leaks.' },
-  { num: '03', label: 'The decision', sub: 'You see the report. You decide what happens next.' },
+  { num: '01', label: 'The conversation', sub: 'Forty-five minutes. No pitch. Both sides decide.' },
+  { num: '02', label: 'The engagement begins', sub: 'You sign. We start. The X-Ray Guarantee stands behind every step.' },
+  { num: '03', label: 'The X-Ray', sub: 'We dig into your books. You see every leak we find.' },
   { num: '04', label: 'The build', sub: 'Command Deck designed. Watchdog trained. Monthly rhythm begins.' },
 ]
 

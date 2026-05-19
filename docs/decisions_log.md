@@ -714,3 +714,72 @@ patterns rather than introducing a third.
 Pattern is provisional pending operator review across both diagrams in
 context. May be formalized in design_canon.md in a future canon-sync
 brief if both patterns prove stable.
+
+## 2026-05-18 — Engagement arc structure (locked, corrects Brief 08)
+
+The Vizion engagement arc is four phases, in this order:
+
+1. The conversation — Forty-five minutes. No pitch. Both sides decide
+   whether there's a fit. No payment, no commitment yet.
+
+2. The engagement begins — Buyer signs. Onboarding fee paid. Monthly
+   billing starts. The X-Ray Guarantee stands behind every step from
+   this moment forward.
+
+3. The X-Ray — Vizion runs the diagnostic, produces the report, walks
+   the buyer through findings. This is the first deliverable inside
+   the paid engagement, not a separate try-before-you-buy diagnostic.
+
+4. The build — Command Deck designed, Watchdog trained, monthly rhythm
+   begins.
+
+The X-Ray Guarantee functions as: "If after the X-Ray we haven't
+surfaced money leaks worth significantly more than what you've paid
+us for it, we'll walk you through why and refund the difference."
+
+The Guarantee is not a "decide whether to continue" moment. It's a
+trust mechanism that protects the buyer's upfront commercial commitment.
+The buyer pays first; the Guarantee covers them if the X-Ray doesn't
+prove its value.
+
+This structure is locked. Brief 08 shipped with an incorrect arc that
+implied the buyer's commercial decision happens after the X-Ray. Brief
+08.5 corrects this in the Engagement section. Future briefs (especially
+Brief 13 - Method page) must reflect this structure. Specifically:
+
+- The conversation precedes any commercial commitment
+- Payment happens at signing, after the conversation
+- The X-Ray happens after payment, not before
+- The Guarantee protects the buyer through the X-Ray phase
+- There is no "buyer decides whether to continue after the X-Ray"
+  phase — that framing is retired
+
+## 2026-05-18 — Veteran-owned framing (locked clarification)
+
+Vizion Corp AI is veteran-owned because Kyle Ames is an 18-year Air
+Force veteran. Jake Salisbury is not a veteran. He is a small business
+owner and behavior change practitioner (per his Welcome Packet bio).
+
+The brand subtag VETERAN-OWNED · PRACTICAL · PLAIN-SPOKEN is correct
+because the company is owned by a veteran (singular ownership of
+veteran status, not joint).
+
+Copy that frames both founders as veterans is factually wrong and
+retired. Examples of correct framing:
+
+- "Veteran-owned" (singular, refers to the company)
+- "Kyle is a veteran. Jake is an operator." (accurate paired framing
+  if needed)
+- "Both owners. Both on the phone every time." (preferred for the
+  Engagement transition line — accurate without conflating veteran
+  status)
+
+Examples of retired framing:
+
+- "Two veterans" (wrong — implies both Jake and Kyle are veterans)
+- "Two vets" (same)
+- "Founded by veterans" (plural — wrong)
+
+This clarification applies to all future copy decisions. Brief 09
+(Founders section) must reflect this accurately when Jake's and
+Kyle's bios are rendered on the site.
