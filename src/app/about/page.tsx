@@ -59,7 +59,7 @@ export default function About() {
             </p>
             <a
               href="mailto:team@vizioncorp.ai"
-              className="inline-block font-mono text-[11px] font-medium tracking-[0.14em] uppercase bg-signal-agent text-ground px-[24px] py-[12px] rounded-[3px] hover:bg-[#FFD879] transition-colors duration-150 max-[720px]:w-full max-[720px]:text-center"
+              className="inline-block font-mono text-[11px] font-medium tracking-[0.14em] uppercase text-signal-agent px-[24px] py-[12px] border border-signal-agent rounded-[3px] hover:bg-[rgba(242,179,61,0.08)] hover:text-[#FFD879] transition-colors duration-150 max-[720px]:w-full max-[720px]:text-center"
             >
               START A CONVERSATION
             </a>
