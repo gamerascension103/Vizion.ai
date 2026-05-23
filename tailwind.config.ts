@@ -27,6 +27,10 @@ const config: Config = {
         sans: ["var(--font-inter-tight)", "-apple-system", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "Menlo", "monospace"],
       },
+      spacing: {
+        '32': '128px',
+        '40': '160px',
+      },
     },
   },
   plugins: [],

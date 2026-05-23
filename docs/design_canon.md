@@ -36,7 +36,7 @@ Color carries meaning in this system. Adding color "for visual interest" violate
 
 The complete role assignment:
 
-- **Amber signal-agent (`#F2B33D`)** appears only when an AI agent is active, a status is live, an eyebrow is identifying a service line, or the pivot of the hook is landing. It is the brand's accent color; using it elsewhere weakens its signal.
+- **Amber signal-agent (`#F2B33D`)** appears only when a Watchdog is active, a status is live, an eyebrow is identifying a service line, or the pivot of the hook is landing. It is the brand's accent color; using it elsewhere weakens its signal.
 - **Signal-leak (`#E36842`)** appears only on leak indicators, risk numbers, warning states, and the leak-banner accent border. Never as a button. Never as a decorative highlight. The reader learns within five seconds that orange-red means "something is costing you."
 - **Warm bone (`#EDE6D5`)** is the brand's ink. Body text, primary copy, the first line of the hook pivot. Treat as the workhorse color.
 - **Muted bone (`#A39C8C`)** is for setup copy, sub-headlines, the hook fragments, dashboard secondary values. It's quieter than primary ink on purpose.
@@ -104,7 +104,7 @@ The complete palette. Always reference by token, not hex, in code.
 | `ink-secondary-bright` | `#C2BBA8` | Emphasis spans in body copy; lifts above ink-secondary without reaching ink-primary or signal-agent. Max two uses per section. |
 | `ink-tertiary` | `#8A8F99` | Labels, captions, nav links |
 | `ink-quaternary` | `#5E6168` | Metadata, timestamps, ultra-quiet supporting text |
-| `signal-agent` | `#F2B33D` | AI agent indicators, active status, eyebrow, hook pivot line 2 |
+| `signal-agent` | `#F2B33D` | Watchdog indicators, active status, eyebrow, hook pivot line 2 |
 | `signal-leak` | `#E36842` | Leak indicators, risk numbers, warning states |
 | `signal-leak-border` | `#4A2218` | Risk-banner border, leak-related framing |
 

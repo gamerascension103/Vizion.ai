@@ -29,7 +29,7 @@ export function EngagementSequence() {
       </div>
 
       {/* Methodology summary */}
-      <p style={summaryStyle}>Four phases &middot; One conversation to start &middot; No surprises</p>
+      <p style={summaryStyle}>One conversation to start &middot; No surprises</p>
     </div>
   )
 }

@@ -36,9 +36,14 @@ export function Header({ variant }: HeaderProps) {
             VIZION&nbsp;&nbsp;CORP
           </span>
           <div style={{ height: 10 }} />
-          <span className="font-mono font-medium text-[9px] tracking-[0.24em] text-signal-agent">
-            Money leaks, made visible
-          </span>
+          <div className="flex flex-col items-center gap-1">
+            <span className="font-mono font-medium text-[9px] tracking-[0.24em] text-signal-agent">
+              Money leaks, made visible
+            </span>
+            <span className="font-mono font-medium text-[9px] tracking-[0.24em] text-ink-tertiary">
+              Then watched, so they don&apos;t come back.
+            </span>
+          </div>
           <div style={{ height: 36 }} />
           <div className="w-full h-px bg-rule-primary" />
           <div style={{ height: 20 }} />
