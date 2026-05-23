@@ -104,13 +104,15 @@ These are the canon. Any copy added or revised must match this register.
 - The X-Ray Guarantee
 - Founders Plan / On-Demand Flex (pricing tiers)
 - Vizion / Vizion Corp / VIZION CORP (wordmark)
+- SIGHT (the system name — the autonomous business advisory system itself)
+
+SIGHT is the proper noun for the autonomous business advisory system that houses the X-Ray, Command Deck, Watchdog, and the loop. Customer-facing usage was opened 2026-05-23.
 
 ### Internal-only names — NEVER on public site
 
 - Mr. Clean
 - Chamber, Synthesize, Data Pull, Cleanup queue
 - Workshop, Workbench
-- SIGHT (platform name — operator-internal)
 - Captain's Method (retired from customer-facing use)
 
 ---
