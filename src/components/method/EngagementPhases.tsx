@@ -1,7 +1,7 @@
 const phases = [
   {
     eyebrow: 'PHASE 01 · DISCOVERY',
-    body: "We learn the business. The conversation, the books, the systems, the way decisions get made today. Discovery is where we calibrate what your X-Ray needs to look for. It\u2019s also where we tell you, honestly, whether we think we can help.",
+    body: "We learn the business. The books, the systems, the way decisions get made today, the goals you\u2019re trying to hold. Discovery calibrates what your X-Ray needs to look for and what your Watchdog will be trained to watch. It\u2019s also where we tell you whether we think we can help.",
   },
   {
     eyebrow: 'PHASE 02 · THE X-RAY',
@@ -9,11 +9,11 @@ const phases = [
   },
   {
     eyebrow: 'PHASE 03 · THE COMMAND DECK',
-    body: "The dashboard. We build the visibility layer that turns the X-Ray\u2019s findings into something you can watch week to week. The Command Deck is yours. Your data, your views, your reports. Tuned to the decisions you actually make.",
+    body: "The application you log into. We build it for your business after the X-Ray defines what matters. Four views (Dashboard, Goal Builder, Audit, and Settings) give you the leaks under watch, the goals you\u2019re holding, the decisions waiting, and the controls to tune it. The Command Deck is yours.",
   },
   {
     eyebrow: 'PHASE 04 · WATCHDOG',
-    body: "The watch goes on. Once the X-Ray is delivered and the Command Deck is live, we deploy the Watchdog specialized to your industry. It studies your business, raises its hand when something is off, and gets sharper every month it runs.",
+    body: "The watch goes on. We deploy the Watchdog specialized to your industry. It reads your data every day, watches the leaks the X-Ray surfaced and the goals you set in the Command Deck, and raises its hand when something needs your decision. It gets sharper every month it runs.",
   },
 ]
 
@@ -25,8 +25,8 @@ export function EngagementPhases() {
         <p style={sectionEyebrowStyle}>THE ENGAGEMENT · FOUR PHASES</p>
 
         <p className="text-base max-[720px]:text-[15px]" style={introStyle}>
-          Every engagement moves through the same four phases. The pace varies by business.
-          The shape doesn&rsquo;t.
+          Every engagement moves through four phases. The pace varies by business. The shape
+          doesn&rsquo;t.
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>

@@ -5,7 +5,7 @@ export function AIFits() {
 
         <p style={sectionEyebrowStyle}>WHERE AI FITS, AND WHERE IT DOESN&apos;T</p>
         <h2 style={sectionTitleStyle} className="text-[32px] max-[720px]:text-[24px]">
-          The honest version.
+          What the AI does. What it doesn&apos;t.
         </h2>
 
       </div>
@@ -14,19 +14,21 @@ export function AIFits() {
 
         {/* Subsection 1 */}
         <div style={subsectionStyle}>
-          <h3 style={subsectionHeadStyle}>What AI does for you in our work</h3>
+          <h3 style={subsectionHeadStyle}>What AI does</h3>
           <p className="text-base max-[720px]:text-[15px]" style={bodyStyle}>
             AI does the watching, sorting, and pattern recognition that no human team could
             keep up with continuously. Your Watchdog reads your data every day. It looks for
             the patterns we&rsquo;ve trained it on, specific to your business and your
-            industry. When something is off, it raises its hand.
+            industry. When something is off (a leak surfacing, a trajectory drifting), it
+            raises its hand.
           </p>
           <p className="text-base max-[720px]:text-[15px]" style={bodyStyle}>
             AI also acts on what it sees. Each Watchdog is trained with specific action
             sequences for your industry. Pushing the right report to the right department.
-            Flagging a vendor for review. Pulling a status check on an aging invoice. Routine
-            work that needs to happen consistently. Every action is approved by your handler
-            before it runs. Nothing fires on its own.
+            Flagging a vendor for review. Pulling a status check on an aging invoice. Drafting
+            the variance report when a goal threshold is crossed. Routine work that needs to
+            happen consistently. Every action is approved by your handler before it runs.
+            Nothing fires on its own.
           </p>
           <p className="text-base max-[720px]:text-[15px]" style={bodyStyle}>
             AI watches. AI surfaces. AI acts, with handler approval. AI explains what it found.
@@ -37,15 +39,13 @@ export function AIFits() {
         <div style={subsectionStyle}>
           <h3 style={subsectionHeadStyle}>What AI doesn&apos;t do</h3>
           <p className="text-base max-[720px]:text-[15px]" style={bodyStyle}>
-            AI doesn&rsquo;t decide. Every Watchdog has a &ldquo;handler&rdquo; at your
-            business. Could be you. Could be someone on your team. When a Watchdog finds
-            something or proposes an action, the handler says yes or no. No action ever
-            happens without that approval.
+            AI doesn&rsquo;t decide. Every Watchdog has a handler at your business. Could be
+            you. Could be someone on your team. When a Watchdog finds something or proposes an
+            action, the handler says yes or no. No action ever happens without that approval.
           </p>
           <p className="text-base max-[720px]:text-[15px]" style={bodyStyle}>
-            This is not a marketing position. It&rsquo;s how the system is built. Watchdogs
-            can&rsquo;t act without a handler&rsquo;s approval. The architecture won&rsquo;t
-            let them.
+            The architecture is built this way on purpose. Watchdogs can&rsquo;t act without
+            a handler&rsquo;s approval.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export function AIFits() {
             Each Watchdog evaluates its own work against confidence thresholds, prior patterns,
             and context it has built up over time. When something doesn&rsquo;t pass that
             internal check, the Watchdog holds the finding rather than push it through.
-            We&rsquo;ve built it to second-guess itself on purpose.
+            We&rsquo;ve built it to second-guess itself by design.
           </p>
           <p className="text-base max-[720px]:text-[15px]" style={bodyStyle}>
             What gets through internal review goes to your handler. The handler decides. Yes,
@@ -93,12 +93,11 @@ export function AIFits() {
             catches what any single layer would miss.
           </p>
           <p className="text-base max-[720px]:text-[15px]" style={{ ...bodyStyle, marginBottom: 0 }}>
-            The longer a Watchdog has been with you, the better it gets. That&rsquo;s not a
-            sales line, that&rsquo;s how the system works. Every handler decision is a piece
-            of training. Every miss that surfaces in reality becomes a pattern the Watchdog
-            watches for next time. Six months in, a Watchdog knows your business. Year two,
-            it&rsquo;s sharper than any off-the-shelf tool could ever be, because it&rsquo;s
-            been trained on your business, by your people.
+            The longer a Watchdog has been with you, the better it gets. Every handler
+            decision is a piece of training. Every miss that surfaces in reality becomes a
+            pattern the Watchdog watches for next time. Six months in, a Watchdog knows your
+            business. Year two, it&rsquo;s sharper than any off-the-shelf tool, because
+            it&rsquo;s been trained on your business, by your people.
           </p>
         </div>
 

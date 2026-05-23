@@ -5,7 +5,7 @@ import { AIFits } from '@/components/method/AIFits'
 
 export const metadata = {
   title: 'How We Work · Vizion Corp AI',
-  description: 'SIGHT is the system. Four phases, three components, and an honest account of where AI fits.',
+  description: 'SIGHT is the system. The X-Ray finds what’s leaking. The Command Deck shows what to watch. Watchdog watches it, and helps you hold the line you set.',
 }
 
 export default function Method() {
@@ -19,11 +19,11 @@ export default function Method() {
           <div style={{ maxWidth: '560px', width: '100%', textAlign: 'center' }}>
             <p style={eyebrowStyle}>HOW WE WORK</p>
             <h1 style={titleStyle} className="text-[40px] max-[720px]:text-[26px]">
-              The method behind the work.
+              What we built, and how it runs.
             </h1>
             <p className="text-base max-[720px]:text-[15px]" style={subStyle}>
-              SIGHT is the system we built. Here&rsquo;s how an engagement runs, what gets
-              built, and where AI fits.
+              SIGHT is the system. The X-Ray finds what&rsquo;s leaking. The Command Deck
+              shows what to watch. Watchdog watches it, and helps you hold the line you set.
             </p>
           </div>
         </section>
@@ -33,12 +33,15 @@ export default function Method() {
           <div style={{ maxWidth: '560px', width: '100%' }}>
             <p className="text-base max-[720px]:text-[15px]" style={bodyStyle}>
               Most owners we talk to don&rsquo;t need more software. They need a partner who
-              knows what to look for, builds the visibility, and then keeps watch.
+              knows what to look for, builds the visibility, and keeps watch with them.
+            </p>
+            <p className="text-base max-[720px]:text-[15px]" style={bodyStyle}>
+              That&rsquo;s the engagement. Find what&rsquo;s leaking now. Build the dashboard
+              that surfaces it. Train the Watchdog that watches the leaks and the goals from
+              here on out.
             </p>
             <p className="text-base max-[720px]:text-[15px]" style={{ ...bodyStyle, marginBottom: 0 }}>
-              That&rsquo;s the engagement. Find what&rsquo;s leaking. Build the dashboard that
-              surfaces it. Train the Watchdog that watches it from now on. We do that work over
-              a defined engagement, and the system stays sharper the longer it runs.
+              The system gets sharper the longer it runs.
             </p>
           </div>
         </section>
