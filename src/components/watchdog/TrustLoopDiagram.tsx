@@ -1,5 +1,5 @@
 const STATES = [
-  { num: '01', label: 'Watchdog proposes', sub: 'The agent surfaces what it\u2019s seen' },
+  { num: '01', label: 'Watchdog proposes', sub: 'Watchdog surfaces what it\u2019s seen' },
   { num: '02', label: 'Handler reviews', sub: 'A named person approves, modifies, or declines' },
   { num: '03', label: 'Action executes', sub: 'Only the approved action. Only as approved.' },
   { num: '04', label: 'Outcome logs', sub: 'Every action becomes part of the audit trail' },
