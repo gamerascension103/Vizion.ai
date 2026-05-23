@@ -783,3 +783,30 @@ Examples of retired framing:
 This clarification applies to all future copy decisions. Brief 09
 (Founders section) must reflect this accurately when Jake's and
 Kyle's bios are rendered on the site.
+
+## 2026-05-23 — SIGHT — Website Canon update: SIGHT moves customer-facing.
+
+Decision: SIGHT, the proper noun for the autonomous business advisory
+system, is now permitted on customer-facing surfaces (website, eventual
+client materials). Previously listed as internal-only in Website Canon
+v1 Section 1.
+
+Reasoning: A&D's locked positioning includes "autonomous business
+advisory system for mid-market businesses." SIGHT is the proper noun for
+that system. Refusing to name it customer-facing creates a gap where the
+positioning language exists but the named entity doesn't, which is
+weaker than naming both. PCORD, Watchdog, X-Ray, Command Deck, and
+Handler are all customer-facing; SIGHT joins them.
+
+Scope: Customer-facing usage on website, /method page, future client
+materials. Internal architecture documents are unaffected.
+
+Cross-domain: No PDF assets change. Welcome Packet, Readahead, Pricing
+Sheet stay locked. Future versions of those documents MAY introduce
+SIGHT, but this decision does not require it.
+
+Note: docs/website_canon_v1_revised_2026-05-23.md was the intended
+target for the complementary canon update (W-Method Part B), but that
+file was never created — W02b logged it as PENDING. This decisions_log
+entry is the canonical record of the SIGHT positioning change until
+the website_canon file is created in a future brief.
